@@ -23,7 +23,7 @@ keepaspectratio]{background}%
 \graphicspath{{../../imgs/}}
 \title{\textbf{Patchistory}}
 \author{Jun-Hyup Kim \& Yeon-Min Jung}
-\date{v1.1 2013-11-11}
+\date{v1.2 2014-01-25}
 \begin{document}
 \AddToShipoutPicture{\BackgroundPic}
 \definecolor{TFFrameColor}{gray}{0.5}
@@ -439,8 +439,8 @@ If the active player has a worker in the War Room of a General Trade Route (whic
 \begin{enumerate}[resume]
 \item From behind their Player Screens, the two players take some or none of the Minerals they possess and conceal them in their hands. Once they have both done this, the amount of Minerals is revealed and the same amount is added to their Strength. The Minerals are then returned to the Public Storage.
 \item The side with the higher Strength wins the war. In the case of a tie, Defenders win. In the case of a tie between two Invaders, both are considered to lose the war.
-\item The winning player (if any) takes victory points: \eraCost{5}{10}{15} VPs for a winning Invader; \eraCost{3}{6}{9} VPs for a winning Defender.
-\item In addition, if the difference in Strengths was 5 or more, the winner receives 7 VPs from the loser for a ``perfect victory''. This bonus can apply to Invaders or Defenders.
+\item The winning player (if any) takes victory points: \eraCost{5}{10}{15} VPs for a winning Invader; \eraCost{3}{6}{9} VPs for a winning Defender. These victory points are taken from the Public Storage.
+\item In addition, if the difference in Strengths was 5 or more, the winner receives 7 VPs from the loser for a ``perfect victory''. This bonus can apply to Invaders or Defenders. It is important to note that these points are taken from the losing player, not the Public Storage.
 \end{enumerate}
 Once the war is over, the worker which triggered the war is immediately moved to a Room of its owners choice in their territory. This will immediately activate any Activity Box in the Room. No more than one worker per Room.
 \inlineImage{WarExample}
@@ -488,13 +488,25 @@ The players will now Vote on the set of Prosperity Cards which will be used to s
 \subsubsection{Scoring}
 First, remove the card or cards which received the fewest number of votes. If any cards remain, score them one at a time.
 
-There are three main types of Prosperity Cards:
-\begin{itemize}
-\item The cards which mention ``Maximum Production'' in the bottom left corner. For these cards, you are ranked according to your production level of the specified resource according to your Player Status Board.
-\item For ``Maximum Capacity'' Traffic, Politics or Military cards you are again ranked according to the status shown on your Player Status Board for the given element.
-\item For all other ``Maximum Capacity'' cards you are ranked for how many of the specified thing there are in your territory. Note that for the ``Maximum Capacity'' Workers card, you count all your workers whether they are in your territory or on Trade Routes. Noe that for the ``Maximum Capacity'' Trade Route card, you only count General Trade Routes which you constructed (i.e. ones where the ``Start'' space is next to your Kingdom) but you count all Allied Trade Routes connected to your Kingdom regardless of who constructed them.
-\end{itemize}
-The players shoud now rank themselves according to either the status as shown on the Player Status Board or the number of items of the particular type they have in their territory, as appropriate. They then receive points according to the number of votes on the card:
+Here is a breakdown of the different Prosperity Cards in the game:
+\begin{description}
+\item[Maximum Capacity - General Building:] Rank the players according to the number of General Building rooms in their territory. General Buildings are Culture, Traffic, Industry, Politics, Economy, and Military. Special Buildings (the ones with a white background), Water, Wasteland, Heroes, or Wonders are not included. General Buildings which have been patched over do not count.
+\item[Maximum Capacity - Hero:] Rank the players according to the number of Heroes in their territory. Heroes which have been patched over do not count.
+\item[Maximum Capacity - Military:] Rank the players according to their current \mil\ as shown on their Player Status Board. This should equal the number of active swords in their territory along with any bonuses from Heroes or Wonders. Shields are not counted.
+\item[Maximum Capacity - Politics:] Rank the players according to their current \pol\ as shown on their Player Status Board. This should equal the number of active books in their territory along with any bonuses from Heroes or Wonders.
+\item[Maximum Capacity - Special Building:] Rank the players according to the number of Special Building rooms in their territory. Special Buildings are the ones with a white background. General Buildings, Water, Wasteland, Heroes, or Wonders are not included. Special Buildings which have been patched over do not count.
+\item[Maximum Capacity - Trade Routes:] Rank the players according to the number of Trade Routes connected to their kingdom. You only count General Trade Routes which you constructed (i.e. ones where the ``Start'' space is next to your Kingdom) but you count all Allied Trade Routes connected to your Kingdom regardless of who constructed them.
+\item[Maximum Capacity - Transport:] Rank the players according to their current \tra\ as shown on their Player Status Board. This should equal the number of active wheels in their territory along with any bonuses from Heroes or Wonders.
+\item[Maximum Capacity - Wasteland:] Rank the players according to the number of Wasteland rooms in their territory. Wastelands which have been patched over do not count.
+\item[Maximum Capacity - Water:] Rank the players according to the number of Water rooms in their territory. Water which has been patched over does not count.
+\item[Maximum Capacity - Wonder:] Rank the players according to the number of Wonders in their territory. Wonders which have been patched over do not count.
+\item[Maximum Capacity - Worker:] Rank the players according to the number of workers in their kingdom. This includes any workers on Trade Routes.
+\item[Maximum Production - Culture:] Rank the players according to their current Victory Point production as shown on their Player Status Board. This should equal the number of active Victory Point icons in their territory along with any bonuses from Heroes or Wonders.
+\item[Maximum Production - Food:] Rank the players according to their current Food production as shown on their Player Status Board. This should equal the number of active Food icons in their territory along with any bonuses from Heroes or Wonders.
+\item[Maximum Production - Mineral:] Rank the players according to their current Mineral production as shown on their Player Status Board. This should equal the number of active Mineral icons in their territory along with any bonuses from Heroes or Wonders.
+\item[Maximum Production - Money:] Rank the players according to their current Money production as shown on their Player Status Board. This should equal the number of active coin icons in their territory along with any bonuses from Heroes or Wonders.
+\end{description}
+Once the players have ranked themselves appropriately, they then receive points according to the number of votes on the card:
 
 \begin{description}
 \item[4 Player Game:] The player with the highest status/most items of the specified type receives 1 VP per vote on the card. The player in second place, receives 1 VP for every two votes on the card (round down). The player in third place receives no points. The player in last place loses 1 VP for every two votes on the card (round down).
@@ -557,7 +569,7 @@ Wonder and Hero effects only last as long as the Wonder or Hero in question is i
 \item[Colosseum:] When taking the \myAction{Campaign} action, in addition to the votes you also receive 1 VP and 2 Money from the Public Storage.
 \item[Colossus of Rhodes:] After winning a war (either as an Invader or as a defender), gain an additional 3 VPs.
 \item[The Great Wall:] You are considered to have 1 additional active shield per worker you have, whether in your territory or on a Trade Route. When an opponent threatens you, you should reduce the resources you must pay by 1.
-\item[Hanging Gardens of Babylon:] During the Production step, gain 1 VP per water room in your kingdom. When patched, remove one descendant from your Player Status Board and return it to the box.
+\item[Hanging Gardens of Babylon:] During the Production step, gain 1 VP per water room in your kingdom. When patched, remove one descendant from your Player Status Board and return it to the box. You always take the descendant from the lowest numbered space that is still covered, as such, this will result in an increase in maintenance costs.
 \item[Lighthouse of Alexandria:] Any player who acts as invader against the kingdom containing the Lighthouse of Alexandria must pay an additional mineral for war preparation. This means the cost of war preparation becomes \eraCost{1}{2}{3}.
 \item[Parthenon:] During the production step, you gain 1 VP for every two Economy buildings you have (round down). In addition, no other player can take money from you using the \myAction{Threaten} action.
 \item[Petra:] During the production step, gain 1 Money for each trade route connected to your kingdom. Note that only General Trade Routes constructed by you (i.e. ones where the ``Start'' space is next to your kingdom) count. All Allied trade routes count.
@@ -590,7 +602,7 @@ Wonder and Hero effects only last as long as the Wonder or Hero in question is i
 \end{description}
 \subsection{Era II Heroes}
 \begin{description}
-\item[Christopher Columbus:] In the Production step, you gain 1 Food per water room in your territory. When patched, remove one descendant from your Player Status Board and return it to the box.
+\item[Christopher Columbus:] In the Production step, you gain 1 Food per water room in your territory. When patched, remove one descendant from your Player Status Board and return it to the box. You always take the descendant from the lowest numbered space that is still covered, as such, this will result in an increase in maintenance costs.
 \item[Elizabeth I:] Your \mil\ is increased by 2 for each Water Room in your territory occupied by one of your workers. After the \myPhase{Vote} phase, you retain any unused votes instead of returning them to the Public Storage.
 \item[Genghis Khan:] Your \mil\ is increased by 1 for each trade route connected to your kingdom. Note that only General Trade Routes constructed by you (i.e. ones where the ``Start'' space is next to your kingdom) count. All Allied trade routes count.
 \item[Jeanne d'Arc:] When taking the \myAction{Campaign} action, gain an additional 2 votes. During a War, you may use 2 votes as 1 mineral when boosting your Strength.
@@ -598,7 +610,7 @@ Wonder and Hero effects only last as long as the Wonder or Hero in question is i
 \item[Napoleon Bonaparte:] Whenever you win a war, you may immediately carry out a \myAction{Threaten} action on the losing side. This action succeeds regardless of the relative Military Forces involved. This action does not cost any Political Force.
 \item[Vasco da Gama:] Once per game, during the \myPhase{Auction} phase, after the Land Cards are revealed but before any bidding takes place you may select one of the Land Cards and take it for free. You do not then participate in that auction round, but may patch the Land Card as normal. In addition, the \polf\ cost of taking the \myAction{Exchange} action is set to 0.
 \item[William Shakespeare:] During the Production step, gain 1 Money for every Culture building in your territory.
-\item[Yi Sun-sin:] Your \mil\ is increased by 1 for each Water Room in your territory. When patched, remove one descendant from your Player Status Board and return it to the box.
+\item[Yi Sun-sin:] Your \mil\ is increased by 1 for each Water Room in your territory. When patched, remove one descendant from your Player Status Board and return it to the box. You always take the descendant from the lowest numbered space that is still covered, as such, this will result in an increase in maintenance costs.
 \end{description}
 \subsection{Era III Wonders}
 \begin{description}
@@ -608,7 +620,7 @@ Wonder and Hero effects only last as long as the Wonder or Hero in question is i
 \item[Eiffel Tower:] Gain 4 VPs for every worker you have at the end of the game.
 \item[Red Cross:] After any War ends (regardless of your involvement) you may pay exactly 1 Food to gain 5 VPs. In addition, when taking the \myAction{Aid} action, your opponent may not refuse the aid.
 \item[Schwerer Gustav:] Remove one Trade Route (Allied or General) from anywhere when patched. During a War, when you using minerals to boost your Strength, the first three minerals you use boost your Strength by 2 instead of 1. Any additional minerals after the third will give the usual boost of 1 Strength. In addition, the \myAction{Threaten} action costs 1 fewer \polf\ (to a minimum of 1).
-\item[Statue of Liberty:] Ignore the territory size limit when patching cards. In addition, gain 3 VPs per wasteland created using the \myAction{Reclaimation} action in your territory at the end of the game.
+\item[Statue of Liberty:] Once the Statue of Liberty is patched into your territory, you may ignore the usual territory size limit when patching LandCards. Note that the Statue itself must still be patched into the usual 7x7 area. You also gain 3 VPs per wasteland created using the \myAction{Reclaimation} action in your territory at the end of the game. Once the Statue of Liberty has been patched into your territory, you are not permitted to patch over it later.
 \item[Stealth Aircraft:] Once per round, after winning a war, you may use the \myAction{Reclaimation} action on your opponents territory. This action is free both in terms of resources and \polf. You use one of your own Construction Tiles for the wasteland. All other normal rules and restrictions for \myAction{Reclaimation} apply.
 \item[Wall Street:] Gain 2 VPs for every 3 Money you have at the end of the game (round down).
 \end{description}
