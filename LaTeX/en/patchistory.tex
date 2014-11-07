@@ -33,6 +33,17 @@
 \newcommand\eraCost[3]{[#1/#2/#3]}
 \newcommand\myAction[1]{\texttt{#1}}
 \newcommand\myPhase[1]{\textit{#1}}
+\iftoggle{original-rules}{
+\newcommand\victorypoint{Victory Point}
+\newcommand\victorypoints{Victory Points}
+\newcommand\vp{VP}
+\newcommand\vps{VPs}
+}{
+\newcommand\victorypoint{Culture}
+\newcommand\victorypoints{Culture}
+\newcommand\vp{Culture}
+\newcommand\vps{Culture}
+}
 \newcommand\tra{Transport Level (TRA)}
 \newcommand\mil{Military Force (MIL)}
 \newcommand\pol{Political Influence (POL)}
@@ -44,15 +55,30 @@
 \maketitle
 \tableofcontents
 \section{Game Story}
+\iftoggle{original-rules}{
 The mankind has evolved consistently over the great moments, and that great moments have been recorded through history.
-\begin{verbatim}We start a new record.
+}{
+Our history has been forged in great moments. Those moments are told and retold for generations, creating a record of our struggles, our joys.
+}
+\iftoggle{original-rules}{We start a new record.
 We go back to those great moments,
 and choose the future of our own.
 We patch the history with new pieces
-of events of our own choices.\end{verbatim}
+of events of our own choices.
+}{Now we begin a new record.
+We return to those great moments,
+and create a new history.
+We will patch a new tapestry of events
+to forge a history of our choosing.
+}
+\iftoggle{original-rules}{
 Your country may have great men like Aristotle or Gandhi, or the grand monuments such as Pyramid and Eiffel Tower. Record your own history and build a kingdom greater than any other's, with Patchistory.
+}{
+Your civilisation may give rise to countless heroes such as Aristotle, Gandhi or Elizabeth I. You may construct dazzling Wonders like the Hanging Gardens, the Eiffel Tower, the Great Wall of China or many others.
+Create your own history and build the greatest civilisation our world has ever seen in - Patchistory.
+}
 \section{Objective}
-Across three Eras, the players will develop their nations. The development and prosperity of their country will be represented by victory points. At the end of Era III, the player with the most victory points will be declared the winner.
+Across three Eras, the players will develop their nations. The development and prosperity of their country will be represented by \victorypoints. At the end of Era III, the player with the most \victorypoints\ will be declared the winner.
 \section{Components}
 \section{Component Overview}
 \compHead{Baselands}
@@ -65,14 +91,14 @@ On the Liberty side, each player will have a different starting arrangement and 
 
 \compHead{Player Screen}
 \inlineImage{PlayerScreen}
-Player Screens are used to hide your resources, VPs and money during the game. The Player Screen also contains a quick reference to the costs and rewards of war, the maintenance costs paid during the \myPhase{Maintain Heroes \& Wonders} phase and the actions that can be taken during the \myPhase{Diplomacy \& Management} phase.
+Player Screens are used to hide your resources, \vps\ and money during the game. The Player Screen also contains a quick reference to the costs and rewards of war, the maintenance costs paid during the \myPhase{Maintain Heroes \& Wonders} phase and the actions that can be taken during the \myPhase{Diplomacy \& Management} phase.
 \compHead{Player Status Board}
 \inlineImage{PlayerStatusBoard}
 The Player Status Board is divided into three sections. On the left is the descendants section where you will place your workers until they are born. This will also show the maintenance cost you must pay for your workers.
 
 In the middle is a status track used to show your current Military Force, Political Influence and Transport Level.
 
-On the right is the production track used to track your overall production of Minerals, Food, VPs and Money.
+On the right is the production track used to track your overall production of Minerals, Food, \vps\ and Money.
 
 The status and production tracks are not intended to imply upper bounds, if you would run off the end of the track, use some mechanism to indicate that you have wrapped round. The Player Status Board should be placed in front of the Player Screen, visible to the other players.
 \compHead{Land Cards}
@@ -112,9 +138,9 @@ Construction tiles have Wasteland spaces on one side and General Buildings on th
 \compHead{Money}
 \centerline{\includegraphics[width=1.25cm]{1Money}  \includegraphics[width=1.25cm]{2Money}  \includegraphics[width=1.25cm]{5Money}}
 The coins represent Money and come in three denominations: 1, 2, and 5.
-\compHead{Victory Point Tokens}
+\compHead{\victorypoint\ Tokens}
 \inlineImage[5cm]{VPTokens}
-These tokens represent Victory Points and come in five denominations: 1, 5, 10, 20 and 80.
+These tokens represent \victorypoints\ and come in five denominations: 1, 5, 10, 20 and 80.
 \compHead{Auction Tokens}
 \centerline{\includegraphics[height=1.25cm]{AT1}\includegraphics[height=1.25cm]{AT2}  \includegraphics[height=1.25cm]{AT3}\includegraphics[height=1.25cm]{AT4}}
 These tokens are used during the auction phase in the two-player game. The red tokens feature Genghis Khan while the Blue tokens feature Rommel.
@@ -132,7 +158,7 @@ The Timeline Board indicates the current round and which phase of the game is cu
 \item Each player takes a Player Screen, a Player Status Board and the 8 worker pieces of the same colour.
 \item Each player places their 8 workers on the descendants section on the left hand side of their Player Status Board.
 \item Each player takes one of each of the seven different status markers and marks their current production levels on their Player Status Board according to their Baseland.
-\item Each player takes: 4 Food, 3 Money, 4 Random Construction Tiles and 20 VPs. These are all placed behind their Player Screen.
+\item Each player takes: 4 Food, 3 Money, 4 Random Construction Tiles and 20 \vps. These are all placed behind their Player Screen.
 \item Each player receives 3 random Prosperity cards.
 \item In a 3 or 4 player game, each player constructs a General Trade Route between their kingdom and the kingdom of the player to their left. In a 2 player game, no initial Trade Routes are placed.
 \item The remaining General Trade Routes are placed near the play area in the Public Storage.
@@ -141,7 +167,7 @@ The Timeline Board indicates the current round and which phase of the game is cu
 \item The remaining resources should be placed near the play area in a Public Storage.
 \item The starting player will be the one who has most recently played a civilization game.
 \end{itemize}
-\begin{BoxExample}Given the Baseland shown below, the player should set up his Player Status Board as shown. 8 workers are placed on the Descendants track. 4 Food, 3 Money, 20 VP and 4 Construction Tiles are placed behind the Player Screen. Finally one General Trade Route is placed facing the Kingdom on the left in a 3 or 4 player game.\end{BoxExample}
+\begin{BoxExample}Given the Baseland shown below, the player should set up his Player Status Board as shown. 8 workers are placed on the Descendants track. 4 Food, 3 Money, 20 \vps\ and 4 Construction Tiles are placed behind the Player Screen. Finally one General Trade Route is placed facing the Kingdom on the left in a 3 or 4 player game.\end{BoxExample}
 \section{Game Overview}
 The game is played across three Eras and each Era consists of five Rounds. During each Round, the following phases will be carried out in order:
 \begin{enumerate}
@@ -164,10 +190,12 @@ The game ends after the \myPhase{End of an Era} phase in Era III.
 \begin{itemize}
 \item The tracks on the Player Status Board are one of the most important pieces of information in the game. Their position will mostly change during the \myPhase{Patching Land Cards} and \myPhase{Movement} phases. Players should make every effort to ensure they are accurate and up to date at all times.
 
-\item All tokens (resources, money, VPs, Construction Tiles) should be kept behind the Player Screens at all times.
-
-\item A player may not have fewer than 0 VPs.
-
+\item All tokens (resources, money, \vps, Construction Tiles) should be kept behind the Player Screens at all times.
+\iftoggle{original-rules}{
+\item A player may not have fewer than 0 \vps.
+}{
+\item A player may not have less than 0 \vps.
+}
 \item Portions of the game may be played simultaneously by all players. However, if a conflict in the order of actions should arise during one of these portions, play should be carried out starting with the player holding the First Player Marker and proceeding clockwise.
 
 \item ``R'' marked on a card means ``Produce the following resource each round during the \myPhase{Production \& Maintain Workers} phase''.
@@ -178,7 +206,7 @@ The game ends after the \myPhase{End of an Era} phase in Era III.
 
 \item ``Set'' on a card means set the cost of some action or some status on your board to a particular value. This value is maintained regardless of any other penalties or bonuses they player may be subject to. A card may ``Set'' the cost in \polf\ for an action to 0.
 
-\item ``Resources'' means Food, Minerals, VPs and Money.
+\item ``Resources'' means Food, Minerals, \vps\ and Money.
 
 \item The resource tokens provided (with the exception of the Construction Tiles) are not intended to be a limit. Use alternative markers if any particular resource runs out during play.
 
@@ -208,7 +236,7 @@ In this phase each player will purchase a Land Card at auction and patch it into
 
 
 \subsubsection{The Auction}
-All players must now participate in the auction. If, at this point, any player has no Money to participate, they must exchange exactly 3 VPs for 1 Money. They may not elect to spend more VPs. If they don't have 3 VPs, they pay however much they have and take 1 Money.
+All players must now participate in the auction. If, at this point, any player has no Money to participate, they must exchange exactly 3 \vps\ for 1 Money. They may not elect to spend more \vps. If they don't have 3 \vps, they pay however much they have and take 1 Money.
 
 The auction starts with the player holding the First Player Marker and proceeds clockwise. On your turn, what you can do depends on your current situation:
 \begin{itemize}
@@ -304,7 +332,7 @@ The players will gain an amount of \polf\ equal to their \pol\ status which they
 
 \subsubsection{Diplomacy Actions}
 \begin{description}
-\item[\actionCost{Aid}{2}] Offer three resources (either Money, Food, Minerals or a mixture thereof) to any other player you are connected to via a Trade Route. If the player accepts, you receive 5 VPs. If the player rejects the aid, you keep the resources and gain 2 VPs. A player who accepts Aid may not offer Aid to other players in the same round.
+\item[\actionCost{Aid}{2}] Offer three resources (either Money, Food, Minerals or a mixture thereof) to any other player you are connected to via a Trade Route. If the player accepts, you receive 5 \vps. If the player rejects the aid, you keep the resources and gain 2 \vps. A player who accepts Aid may not offer Aid to other players in the same round.
 \item[\actionCost{Threaten}{3}] You may threaten any other player you are connected to via a Trade Route that you own (i.e. one where the ``Start'' space is next to your kingdom). You may not threaten a player if there is an Allied Trade Route between you and that player, even if other Trade Routes exist.
 \begin{itemize}
 \item In order to threaten a player, your Attack Force must be higher than that player's Defensive Force.
@@ -313,12 +341,12 @@ The players will gain an amount of \polf\ equal to their \pol\ status which they
 \statExplain{\mil}{Number of active swords in your territory + any bonuses from Heroes/Wonders.}
 \statExplain{Attack Force}{\mil}
 \statExplain{Defensive Force}{\mil\ + Number of active shields in your territory.}
-\begin{description}
 \begin{itemize}
-\item If your Attack Force is sufficient, you may demand either \eraCost{3}{4}{5} Money or \eraCost{2}{3}{4} VPs. The player being threatened must pay if possible.
+\item If your Attack Force is sufficient, you may demand either \eraCost{3}{4}{5} Money or \eraCost{2}{3}{4} \vps. The player being threatened must pay if possible.
 \item If the player being threatened lacks sufficient resources to pay, they must pay whatever amount of the requested resource they have.
 \end{itemize}
 
+\begin{description}
 \item[\actionCost{Break Alliance}{All}] This action costs all of your \polf\ for the turn (i.e. if you wish to break an Alliance, it can be the only action you take during the whole \myPhase{Diplomacy \& Managment} phase).
 \begin{itemize}
 \item For each Political Favour spent on this action, take 1 vote from the Public Storage.
@@ -340,8 +368,8 @@ The players will gain an amount of \polf\ equal to their \pol\ status which they
 
 \subsubsection*{\textit{Worship Actions}}
 \begin{description}
-\item[\actionCost{Worship Heroes}{2}] Pay \eraCost{1}{2}{3} Food to the Public Storage and gain 1 VP per hero you possess.
-\item[\actionCost{Worship Wonders}{2}] Pay \eraCost{0}{1}{2} Minerals to the Public Storage and gain 1 VP per wonder you possess.
+\item[\actionCost{Worship Heroes}{2}] Pay \eraCost{1}{2}{3} Food to the Public Storage and gain 1 \vp\ per hero you possess.
+\item[\actionCost{Worship Wonders}{2}] Pay \eraCost{0}{1}{2} Minerals to the Public Storage and gain 1 \vp\ per wonder you possess.
 \end{description}
 
 \subsubsection*{\textit{Construction Actions}}
@@ -425,8 +453,12 @@ If the active player has a worker on a Negotiation Room, he, and the player at t
 {\noindent If one player or both players decide to be aggressive:}
 \begin{itemize}
 \item War is declared and will be resolved in the next Negotiation and War phase.
-\item Any player who decided to be aggressive is considered to be an Invader. They must immediately pay for War Preparations. The cost is \eraCost{0}{1}{2} Minerals. If a player lacks sufficient resources, they must pay what they have and then in addition pay 6 VPs per Mineral they were short.
-\item A player who decided to be peaceful is considered to be a Defender. They are not required to pay any War Preparation, but will also receive fewer VPs in the event of victory.
+\item Any player who decided to be aggressive is considered to be an Invader. They must immediately pay for War Preparations. The cost is \eraCost{0}{1}{2} Minerals. If a player lacks sufficient resources, they must pay what they have and then in addition pay 6 \vps\ per Mineral they were short.
+\iftoggle{original-rules}{
+\item A player who decided to be peaceful is considered to be a Defender. They are not required to pay any War Preparation, but will also receive fewer \vps\ in the event of victory.
+}{
+\item A player who decided to be peaceful is considered to be a Defender. They are not required to pay any War Preparation, but will also receive less \vps\ in the event of victory.
+}
 \end{itemize}
 
 \subsubsection{War (What is it good for?)}
@@ -440,8 +472,13 @@ If the active player has a worker in the War Room of a General Trade Route (whic
 \begin{enumerate}[resume]
 \item From behind their Player Screens, the two players take some or none of the Minerals they possess and conceal them in their hands. Once they have both done this, the amount of Minerals is revealed and the same amount is added to their Strength. The Minerals are then returned to the Public Storage.
 \item The side with the higher Strength wins the war. In the case of a tie, Defenders win. In the case of a tie between two Invaders, both are considered to lose the war.
-\item The winning player (if any) takes victory points: \eraCost{5}{10}{15} VPs for a winning Invader; \eraCost{3}{6}{9} VPs for a winning Defender. These victory points are taken from the Public Storage.
-\item In addition, if the difference in Strengths was 5 or more, the winner receives 7 VPs from the loser for a ``perfect victory''. This bonus can apply to Invaders or Defenders. It is important to note that these points are taken from the losing player, not the Public Storage.
+\iftoggle{original-rules}{
+\item The winning player (if any) receives \victorypoints: \eraCost{5}{10}{15} \vps\ for a winning Invader; \eraCost{3}{6}{9} \vps\ for a winning Defender. These \victorypoints\ are taken from the Public Storage.
+\item In addition, if the difference in Strengths was 5 or more, the winner receives 7 \vps\ from the loser for a ``perfect victory''. This bonus can apply to Invaders or Defenders. It is important to note that these \vps\ are taken from the losing player, not the Public Storage.
+}{
+\item The winning player (if any) receives \victorypoints: \eraCost{5}{10}{15} \vps\ for a winning Invader; \eraCost{3}{6}{9} \vps\ for a winning Defender. This \victorypoint\ is taken from the Public Storage.
+\item In addition, if the difference in Strengths was 5 or more, the winner receives 7 \vps\ from the loser for a ``perfect victory''. This bonus can apply to Invaders or Defenders. It is important to note that this \vps\ is taken from the losing player, not the Public Storage.
+}
 \end{enumerate}
 Once the war is over, the worker which triggered the war is immediately moved to a Room of its owners choice in their territory. This will immediately activate any Activity Box in the Room. No more than one worker per Room.
 \inlineImage{WarExample}
@@ -464,7 +501,7 @@ In addition, the player should take the resource indicated by any Trade Route sp
 \subsubsection{Maintain Workers}
 In this step, you must feed your workers. The amount of Food you must pay is indicated by the highest uncovered number in the descendant section of the Player Status Board.
 
-If you have enough food, you must pay the full amount. If you do not have enough food, you must pay what you can and then additionally pay 3 VPs for every Food you were short.
+If you have enough food, you must pay the full amount. If you do not have enough food, you must pay what you can and then additionally pay 3 \vps\ for every Food you were short.
 
 \subsection{End of Round}
 The First Player Marker should now be moved to the left.
@@ -472,7 +509,7 @@ The First Player Marker should now be moved to the left.
 If this is the last round of a given Era (always the Fifth round) you should additionally carry out the following three phases:
 
 \subsection{Maintain Heroes \& Wonders}
-Maintenance costs are 2 Food per hero and 1 Mineral per wonder. If you have enough resources, you must pay the full amount. If you do not have enough resources, you must pay what you can and then additionally pay 3VPs for every Food you were short and 6VPs for every Mineral you were short.
+Maintenance costs are 2 Food per hero and 1 Mineral per wonder. If you have enough resources, you must pay the full amount. If you do not have enough resources, you must pay what you can and then additionally pay 3 \vps\ for every Food you were short and 6 \vps\ for every Mineral you were short.
 \subsection{Vote}
 \subsubsection{Voting}
 The players will now Vote on the set of Prosperity Cards which will be used to score this Era.
@@ -502,7 +539,7 @@ Here is a breakdown of the different Prosperity Cards in the game:
 \item[Maximum Capacity - Water:] Rank the players according to the number of Water rooms in their territory. Water which has been patched over does not count.
 \item[Maximum Capacity - Wonder:] Rank the players according to the number of Wonders in their territory. Wonders which have been patched over do not count.
 \item[Maximum Capacity - Worker:] Rank the players according to the number of workers in their kingdom. This includes any workers on Trade Routes.
-\item[Maximum Production - Culture:] Rank the players according to their current Victory Point production as shown on their Player Status Board. This should equal the number of active Victory Point icons in their territory along with any bonuses from Heroes or Wonders.
+\item[Maximum Production - Culture:] Rank the players according to their current \victorypoint\ production as shown on their Player Status Board. This should equal the number of active \victorypoint\ icons in their territory along with any bonuses from Heroes or Wonders.
 \item[Maximum Production - Food:] Rank the players according to their current Food production as shown on their Player Status Board. This should equal the number of active Food icons in their territory along with any bonuses from Heroes or Wonders.
 \item[Maximum Production - Mineral:] Rank the players according to their current Mineral production as shown on their Player Status Board. This should equal the number of active Mineral icons in their territory along with any bonuses from Heroes or Wonders.
 \item[Maximum Production - Money:] Rank the players according to their current Money production as shown on their Player Status Board. This should equal the number of active coin icons in their territory along with any bonuses from Heroes or Wonders.
@@ -510,9 +547,9 @@ Here is a breakdown of the different Prosperity Cards in the game:
 Once the players have ranked themselves appropriately, they then receive points according to the number of votes on the card:
 
 \begin{description}
-\item[4 Player Game:] The player with the highest status/most items of the specified type receives 1 VP per vote on the card. The player in second place, receives 1 VP for every two votes on the card (round down). The player in third place receives no points. The player in last place loses 1 VP for every two votes on the card (round down).
+\item[4 Player Game:] The player with the highest status/most items of the specified type receives 1 \vp\ per vote on the card. The player in second place, receives 1 \vp\ for every two votes on the card (round down). The player in third place receives nothing. The player in last place loses 1 \vp\ for every two votes on the card (round down).
 
-\item[3 Player Game:] The player with the highest status/most buildings of the specified type receives 1 VP per vote on the card. The player in second place, receives 1 VP for every two votes on the card (round down). The player in third place receives no points.
+\item[3 Player Game:] The player with the highest status/most buildings of the specified type receives 1 \vp\ per vote on the card. The player in second place, receives 1 \vp\ for every two votes on the card (round down). The player in third place receives nothing.
 \end{description}
 
 This scoring information is summarised on the prosperity card itself, the columns indicate the number of players and the row indicates the payout for being at that relative position.
@@ -521,7 +558,7 @@ Players who tie for positions instead reduce their relative position by the numb
 
 Once all cards have been scored, remove all played Prosperity cards from the game.
 
-\begin{BoxExample}A prosperity card which received 7 votes is being scored. The player in 1st place will get 7 VPs, 2nd place 3 VPs, 3rd place 0 VPs and 4th place will lose 3 VPs.\end{BoxExample}
+\begin{BoxExample}A prosperity card which received 7 votes is being scored. The player in 1st place will get 7 \vps, 2nd place 3 \vps, 3rd place 0 \vps\ and 4th place will lose 3 \vps.\end{BoxExample}
 
 \subsection{The End of an Era}
 If any Heroes or Wonders have scoring related to \myPhase{The End of an Era} they are scored now.
@@ -531,9 +568,9 @@ Remove any unused land cards from the current Era and prepare a new deck of 25 l
 \section{Game End}
 The game ends at the end of Era III.
 
-Resources are worth nothing unless you have a Hero or Wonder that allows you to convert them to VPs.
+Resources are worth nothing unless you have a Hero or Wonder that allows you to convert them to \vps.
 
-The player with the most VPs wins the game. If multiple players are tied for most VPs, they can either rejoice in a shared victory or play another game to settle it.
+The player with the most \vps\ wins the game. If multiple players are tied for most \vp, they can either rejoice in a shared victory or play another game to settle it.
 \begin{appendices}
 \section{2 Player Rules}
 The two player rules are slightly different from the rules for 3 or 4 players. This section details those differences.
@@ -558,7 +595,7 @@ Although you can usually allow patching to proceed simultaneously in a 3 or 4 pl
 \subsection{Scoring Prosperity Cards}
 No Prosperity cards are eliminated in a 2-player game - both played cards will always score.
 
-First look at the card, or cards, with the most votes. The winning player on this card scores 1 VP per vote placed on the card. The losing player scores nothing. If one card had fewer votes than the other, then the winning player on that card scores 1 VP for every two votes placed on the card (round down) and the losing player scores nothing.
+First look at the card, or cards, with the most votes. The winning player on this card scores 1 \vp\ per vote placed on the card. The losing player scores nothing. If one card had fewer votes than the other, then the winning player on that card scores 1 \vp\ for every two votes placed on the card (round down) and the losing player scores nothing.
 \section{Wonders \& Heroes}
 This section provides clarifications and additional details on the special effects of the various Wonders and Heroes in the game.
 
@@ -567,22 +604,22 @@ Any production symbols on the cards are not noted here as their effects are alre
 Wonder and Hero effects only last as long as the Wonder or Hero in question is in your kingdom. If you ever patch over a Wonder or Hero, its effects will stop.
 \subsection{Era I Wonders}
 \begin{description}
-\item[Colosseum:] When taking the \myAction{Campaign} action, in addition to the votes you also receive 1 VP and 2 Money from the Public Storage.
-\item[Colossus of Rhodes:] After winning a war (either as an Invader or as a defender), gain an additional 3 VPs.
+\item[Colosseum:] When taking the \myAction{Campaign} action, in addition to the votes you also receive 1 \vp\ and 2 Money from the Public Storage.
+\item[Colossus of Rhodes:] After winning a war (either as an Invader or as a defender), gain an additional 3 \vps.
 \item[The Great Wall:] You are considered to have 1 additional active shield per worker you have, whether in your territory or on a Trade Route. When an opponent threatens you, you should reduce the resources you must pay by 1.
-\item[Hanging Gardens of Babylon:] During the Production step, gain 1 VP per water room in your kingdom. When patched, remove one descendant from your Player Status Board and return it to the box. You always take the descendant from the lowest numbered space that is still covered, as such, this will result in an increase in maintenance costs.
+\item[Hanging Gardens of Babylon:] During the Production step, gain 1 \vp\ per water room in your kingdom. When patched, remove one descendant from your Player Status Board and return it to the box. You always take the descendant from the lowest numbered space that is still covered, as such, this will result in an increase in maintenance costs.
 \item[Lighthouse of Alexandria:] Any player who acts as invader against the kingdom containing the Lighthouse of Alexandria must pay an additional mineral for war preparation. This means the cost of war preparation becomes \eraCost{1}{2}{3}.
-\item[Parthenon:] During the production step, you gain 1 VP for every two Economy buildings you have (round down). In addition, no other player can take money from you using the \myAction{Threaten} action.
+\item[Parthenon:] During the production step, you gain 1 \vp\ for every two Economy buildings you have (round down). In addition, no other player can take money from you using the \myAction{Threaten} action.
 \item[Petra:] During the production step, gain 1 Money for each trade route connected to your kingdom. Note that only General Trade Routes constructed by you (i.e. ones where the ``Start'' space is next to your kingdom) count. All Allied trade routes count.
-\item[Pyramid:] Lose 5 VPs during \myPhase{The End of an Era} phase at the end of Era I. Lose 5 VPs during \myPhase{The End of an Era} phase at the end of Era II. Gain 40 VPs during \myPhase{The End of an Era} phase at the end of Era III.
-\item[Ziggurat:] Gain 2 VP per worker, whether in your territory or on a Trade Route, during \myPhase{The End of an Era} phase.
+\item[Pyramid:] Lose 5 \vps\ during \myPhase{The End of an Era} phase at the end of Era I. Lose 5 \vps\ during \myPhase{The End of an Era} phase at the end of Era II. Gain 40 \vps\ during \myPhase{The End of an Era} phase at the end of Era III.
+\item[Ziggurat:] Gain 2 \vps\ per worker, whether in your territory or on a Trade Route, during \myPhase{The End of an Era} phase.
 \end{description}
 \subsection{Era I Heroes}
 \begin{description}
 \item[Alexander the Great:] Pay one less Food when taking the \myAction{Worship Heroes} action.
 \item[Aristotle:] No effect beyond the symbols on the card.
 \item[Constantine the Great:] When you patch this Hero, you may immediately form an alliance with one other player whom you are not already allied with. The Alliance is indicated by placing an Allied Trade Route between the other player's kingdom and your own. If there are any workers on any Negotiation Room between the two kingdoms, they are immediately returned to their owner who may place them anywhere within their territory (no more than 1 worker per room).
-\item[Cyrus the Great:] Whenever you gain resources from a Trade Route during the production step, gain 1 VP.
+\item[Cyrus the Great:] Whenever you gain resources from a Trade Route during the production step, gain 1 \vp.
 \item[Gaius Julius Caesar:] Increase your \mil\ by 1 for every 1 Political Force (POL) you possess.
 \item[Gwanggaeto the Great:] Increase your \mil\ by 1 for every 2 wasteland rooms in your territory (round down).
 \item[Homer:] During the production step, gain 1 Food for every 2 wasteland rooms in your territory (round down).
@@ -592,13 +629,13 @@ Wonder and Hero effects only last as long as the Wonder or Hero in question is i
 \subsection{Era II Wonders}
 \begin{description}
 \item[Angkor Wat:] Water Rooms within your kingdom may be regarded as wastelands. This means they can be patched over and under. Note that this effect does not apply to a Land Card until it has already been patched into your kingdom. As such, you may not patch any water rooms on new Land Cards under other cards, however, you may patch a new water room adjacent to existing water rooms. In addition, when counting rooms, you may count water rooms as either wasteland or water depending on which type you are counting.
-\item[Chichen-Itza:] Whenever you patch a wonder after the Chichen-Itza is patched, immediately gain 2 mineral. At the end of the \myPhase{Maintain Heroes \& Wonders} phase, you may pay 1 worker and 2 minerals to gain 5 VPs. You may take advantage of this bonus as many times as you can afford to pay for it.
+\item[Chichen-Itza:] Whenever you patch a wonder after the Chichen-Itza is patched, immediately gain 2 mineral. At the end of the \myPhase{Maintain Heroes \& Wonders} phase, you may pay 1 worker and 2 minerals to gain 5 \vps. You may take advantage of this bonus as many times as you can afford to pay for it.
 \item[Forbidden City:] You lose 3 \mil\ as long as the Forbidden City is patched.
-\item[Kremlin:] You must pay 1 worker and 7 VPs when patching the Kremlin. If you cannot afford this, you must pay as much as you are able to, but are still permitted to patch the Kremlin.
+\item[Kremlin:] You must pay 1 worker and 7 \vps\ when patching the Kremlin. If you cannot afford this, you must pay as much as you are able to, but are still permitted to patch the Kremlin.
 \item[Machu Picchu:] You do not need to pay any maintenance during the \myPhase{Maintain Heroes \& Wonders} phase.
-\item[Pantheon:] When taking the \myAction{Worship Heroes} action, in addition to the VPs you also receive 1 Vote and 2 Money from the Public Storage.
+\item[Pantheon:] When taking the \myAction{Worship Heroes} action, in addition to the \vps\ you also receive 1 Vote and 2 Money from the Public Storage.
 \item[Seokguram:] Counts as 2 wonders whenever you need to count the number of wonders you own (e.g. when using the \myAction{Worship Wonders} action).
-\item[Taj Mahal:] When using the \myAction{Worship Wonders} action gain an additional VP per wonder  you own.
+\item[Taj Mahal:] When using the \myAction{Worship Wonders} action gain an additional \vp\ per wonder  you own.
 \item[Timbuktu:] When patched immediately construct a General Trade Route between your kingdom and another, if any remain in the Public Storage. In addition, whenever you gain resources from a Trade Route (Allied or General) gain one additional resource of the same type.
 \end{description}
 \subsection{Era II Heroes}
@@ -607,7 +644,7 @@ Wonder and Hero effects only last as long as the Wonder or Hero in question is i
 \item[Elizabeth I:] Your \mil\ is increased by 2 for each Water Room in your territory occupied by one of your workers. After the \myPhase{Vote} phase, you retain any unused votes instead of returning them to the Public Storage.
 \item[Genghis Khan:] Your \mil\ is increased by 1 for each trade route connected to your kingdom. Note that only General Trade Routes constructed by you (i.e. ones where the ``Start'' space is next to your kingdom) count. All Allied trade routes count.
 \item[Jeanne d'Arc:] When taking the \myAction{Campaign} action, gain an additional 2 votes. During a War, you may use 2 votes as 1 mineral when boosting your Strength.
-\item[Martin Luther:] During the production step, gain 1 VP per Industry building in your territory containing both an activity box (indicated by a gold border) and one of your workers. In addition, your \mil\ is increased by one for every Industry building in your territory containing both an activity box (indicated by a gold border) and one of your workers.
+\item[Martin Luther:] During the production step, gain 1 \vp\ per Industry building in your territory containing both an activity box (indicated by a gold border) and one of your workers. In addition, your \mil\ is increased by one for every Industry building in your territory containing both an activity box (indicated by a gold border) and one of your workers.
 \item[Napoleon Bonaparte:] Whenever you win a war, you may immediately carry out a \myAction{Threaten} action on the losing side. This action succeeds regardless of the relative Military Forces involved. This action does not cost any Political Force.
 \item[Vasco da Gama:] Once per game, during the \myPhase{Auction} phase, after the Land Cards are revealed but before any bidding takes place you may select one of the Land Cards and take it for free. You do not then participate in that auction round, but may patch the Land Card as normal. In addition, the \polf\ cost of taking the \myAction{Exchange} action is set to 0.
 \item[William Shakespeare:] During the Production step, gain 1 Money for every Culture building in your territory.
@@ -615,27 +652,27 @@ Wonder and Hero effects only last as long as the Wonder or Hero in question is i
 \end{description}
 \subsection{Era III Wonders}
 \begin{description}
-\item[Apollo 11:] During the Production step gain 1 VP per \tra. In addition, during the Production step, gain 1 VP for each trade route connected to your kingdom. Note that only General Trade Routes constructed by you (i.e. ones where the ``Start'' space is next to your kingdom) count. All Allied trade routes count.
-\item[Christ the Redeemer:] Christ the Redeemer is considered to be 1 Hero when taking the \myAction{Worship Heroes} action. When taking the \myAction{Worship Heroes} action, in addition to the normal VPs you receive a further 3 VPs from the Public Storage.
-\item[Disneyland:] Double the VPs gained or lost for you, and you alone, for a single Prosperity card during the \myPhase{Vote} phase. If you come last in all cards, you must still double the loss on one of them.
-\item[Eiffel Tower:] Gain 4 VPs for every worker you have at the end of the game.
-\item[Red Cross:] After any War ends (regardless of your involvement) you may pay exactly 1 Food to gain 5 VPs. In addition, when taking the \myAction{Aid} action, your opponent may not refuse the aid.
+\item[Apollo 11:] During the Production step gain 1 \vp\ per \tra. In addition, during the Production step, gain 1 \vp\ for each trade route connected to your kingdom. Note that only General Trade Routes constructed by you (i.e. ones where the ``Start'' space is next to your kingdom) count. All Allied trade routes count.
+\item[Christ the Redeemer:] Christ the Redeemer is considered to be 1 Hero when taking the \myAction{Worship Heroes} action. When taking the \myAction{Worship Heroes} action, in addition to the normal \vps\ you receive a further 3 \vps\ from the Public Storage.
+\item[Disneyland:] Double the \vps\ gained or lost for you, and you alone, for a single Prosperity card during the \myPhase{Vote} phase. If you come last in all cards, you must still double the loss on one of them.
+\item[Eiffel Tower:] Gain 4 \vps\ for every worker you have at the end of the game.
+\item[Red Cross:] After any War ends (regardless of your involvement) you may pay exactly 1 Food to gain 5 \vps. In addition, when taking the \myAction{Aid} action, your opponent may not refuse the aid.
 \item[Schwerer Gustav:] Remove one Trade Route (Allied or General) from anywhere when patched. During a War, when you using minerals to boost your Strength, the first three minerals you use boost your Strength by 2 instead of 1. Any additional minerals after the third will give the usual boost of 1 Strength. In addition, the \myAction{Threaten} action costs 1 fewer \polf\ (to a minimum of 1).
-\item[Statue of Liberty:] Once the Statue of Liberty is patched into your territory, you may ignore the usual territory size limit when patching Land Cards. Note that the Statue itself must still be patched into the usual 7x7 area. You also gain 3 VPs per wasteland created using the \myAction{Reclaimation} action in your territory at the end of the game. Once the Statue of Liberty has been patched into your territory, you are not permitted to patch over it later.
+\item[Statue of Liberty:] Once the Statue of Liberty is patched into your territory, you may ignore the usual territory size limit when patching Land Cards. Note that the Statue itself must still be patched into the usual 7x7 area. You also gain 3 \vps\ per wasteland created using the \myAction{Reclaimation} action in your territory at the end of the game. Once the Statue of Liberty has been patched into your territory, you are not permitted to patch over it later.
 \item[Stealth Aircraft:] Once per round, after winning a war, you may use the \myAction{Reclaimation} action on your opponents territory. This action is free both in terms of resources and \polf. You use one of your own Construction Tiles for the wasteland. All other normal rules and restrictions for \myAction{Reclaimation} apply.
-\item[Wall Street:] Gain 2 VPs for every 3 Money you have at the end of the game (round down).
+\item[Wall Street:] Gain 2 \vps\ for every 3 Money you have at the end of the game (round down).
 \end{description}
 \subsection{Era III Heroes}
 \begin{description}
-\item[Andrew Carnegie:] During the production step, gain 1 Money per \tra. In addition, gain 5 VPs whenever you take the \myAction{Trade} action.
-\item[Antoni Gaudi:] Gain 5 VPs whenever you take the \myAction{Construct Building} action during the Management step. The \myAction{Construct Building} action costs 1 fewer \polf\ (to a minimum of 1), but the building you construct costs 1 additional mineral.
+\item[Andrew Carnegie:] During the production step, gain 1 Money per \tra. In addition, gain 5 \vps\ whenever you take the \myAction{Trade} action.
+\item[Antoni Gaudi:] Gain 5 \vps\ whenever you take the \myAction{Construct Building} action during the Management step. The \myAction{Construct Building} action costs 1 fewer \polf\ (to a minimum of 1), but the building you construct costs 1 additional mineral.
 \item[Che Guevera:] Gain 10 Votes from the Public Storage when patched. Your \pol\ is set to 6 regardless of any other card effects.
 \item[Erwin Rommel:] During the \myPhase{Negotiation \& War} phase, after any Negotiation which results in War immediately move the worker which initiated the Negotiation into the War Room. This causes the War to be resolved this round rather than waiting until next round.
-\item[Karl Heinrich Marx:] Gain 1 VP per general building (the coloured ones) at the end of the game. In addition, your worker maintenance cost is set to 5 Food regardless of the number of workers you actually have.
-\item[Lula da Silva:]During the production step, gain 1 VP per worker you own.
-\item[Mahatma Gandhi:] Gain 2 VPs when taking the \myAction{Aid} action, regardless of the outcome. In addition, you may \myAction{Threaten} other players regardless of the relative \mil\ between you and them. Also, gain 1 VP per Industry Room which produces Food in your territory at the end of the game.
-\item[Otto von Bismarck:] You may take the \myAction{Threaten} action against any other player regardless of Alliances or Trade Routes. In addition, gain 5 VPs when taking the \myAction{Threaten} action.
-\item[Pope John Paul II:] On the round this card is patched, you cannot lose any VPs due to any \myAction{Threaten} actions against you or due to a ``perfect victory'' against you in a war. In addition, during the production step, gain 2 VPs per Culture building in your territory containing both an activity box (indicated by a gold border) and one of your workers.
+\item[Karl Heinrich Marx:] Gain 1 \vp\ per general building (the coloured ones) at the end of the game. In addition, your worker maintenance cost is set to 5 Food regardless of the number of workers you actually have.
+\item[Lula da Silva:]During the production step, gain 1 \vp\ per worker you own.
+\item[Mahatma Gandhi:] Gain 2 \vps\ when taking the \myAction{Aid} action, regardless of the outcome. In addition, you may \myAction{Threaten} other players regardless of the relative \mil\ between you and them. Also, gain 1 \vp\ per Industry Room which produces Food in your territory at the end of the game.
+\item[Otto von Bismarck:] You may take the \myAction{Threaten} action against any other player regardless of Alliances or Trade Routes. In addition, gain 5 \vps\ when taking the \myAction{Threaten} action.
+\item[Pope John Paul II:] On the round this card is patched, you cannot lose any \vps\ due to any \myAction{Threaten} actions against you or due to a ``perfect victory'' against you in a war. In addition, during the production step, gain 2 \vps\ per Culture building in your territory containing both an activity box (indicated by a gold border) and one of your workers.
 \end{description}
 
 \section*{Credits}
