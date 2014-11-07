@@ -1,5 +1,6 @@
 \documentclass[10pt,twocolumn]{article}
 \usepackage[margin=1in]{geometry}
+\usepackage{amssymb}
 \usepackage{color}
 \usepackage{alltt}
 \usepackage{fancybox}
@@ -11,21 +12,11 @@
 \usepackage{etoolbox} % for conditional toggles
 \usepackage[title,titletoc,toc]{appendix}
 \geometry{a4paper}
-
-\newtoggle{original-rules}
-\toggletrue{original-rules}
-
-\newcommand\BackgroundPic{
-\put(0,0){
-\parbox[b][\paperheight]{\paperwidth}{%
-\vfill
-\centering
-\includegraphics[width=\paperwidth,height=\paperheight,
-keepaspectratio]{background}%
-\vfill
-}}}
 \graphicspath{{../../imgs/}}
 \title{\textbf{Patchistory}}
+
+\newtoggle{original-rules}
+\togglefalse{original-rules}
 \author{Jun-Hyup Kim \& Yeon-Min Jung}
 \iftoggle{original-rules}{
 \date{v1.3orig 2014-11-10}
@@ -33,7 +24,6 @@ keepaspectratio]{background}%
 \date{v1.3sk 2014-11-10}
 }
 \begin{document}
-\AddToShipoutPicture{\BackgroundPic}
 \definecolor{TFFrameColor}{gray}{0.5}
 \definecolor{TFTitleColor}{gray}{1}
 \newenvironment{BoxExample}%
@@ -47,10 +37,10 @@ keepaspectratio]{background}%
 \newcommand\mil{Military Force (MIL)}
 \newcommand\pol{Political Influence (POL)}
 \newcommand\polf{Political Favours}
-\newcommand\inlineImage[2][\linewidth]{\centerline{\includegraphics[width=#1]{#2}}}
+\newcommand\inlineImage[2][\linewidth]{\centerline{\includegraphics[width=#1]{../../imgs/#2.jpg}}}
 \newcommand\actionCost[2]{#1 (#2):}
 \newcommand\compHead[1]{\subsection*{#1}}
-\newcommand\floatingImage[3][\linewidth]{\begin{figure}\centering\includegraphics[width=#1]{#3}\caption{#2}\end{figure}}
+\newcommand\floatingImage[3][\linewidth]{\begin{figure}\centering\includegraphics[width=#1]{../../imgs/#3.jpg}\caption{#2}\end{figure}}
 \maketitle
 \tableofcontents
 \section{Game Story}
@@ -233,7 +223,8 @@ Notes:
 \item Players may only bid on a single Land Card at one time.
 \item Bids may be increased but never reduced.
 \end{itemize}
-\begin{BoxExample}Player order for the auction: Gandhi - Alexander - Lee Sun Sin - Bismark:
+\begin{BoxExample}
+Player order for the auction: Gandhi - Alexander - Lee Sun Sin - Bismark:
 \begin{enumerate}
 \item Gandhi bids 3 money on Land Card A.
 \item Alexander bids 1 money on Land Card B.
@@ -278,7 +269,9 @@ Once you have won an auction, you must immediately patch the Land Card into your
 \item Land Cards are immediately active from the moment they are placed.
 \end{itemize}
 You should now update your Player Status Board to take account of the new arrangement.
-\begin{BoxExample}A Kingdom with CUL 1, POL 1, ECO 1, MIL 1, TRA 1 and Food1, patched a Land Card over the Industry Room and should now adjust the Player Status Board to show CUL 1, POL 2, ECO 1, MIL 1, TRA 1 and Minerals 1.\end{BoxExample}
+\begin{BoxExample}
+A Kingdom with CUL 1, POL 1, ECO 1, MIL 1, TRA 1 and Food1, patched a Land Card over the Industry Room and should now adjust the Player Status Board to show CUL 1, POL 2, ECO 1, MIL 1, TRA 1 and Minerals 1.
+\end{BoxExample}
 
 
 \subsubsection{The First Round Auction}
