@@ -14,7 +14,8 @@
 \geometry{a4paper}
 \graphicspath{{../../imgs/}}
 \title{\textbf{Patchistory}}
-
+\newif\iforiginal
+\originalfalse
 \newtoggle{original-rules}
 \togglefalse{original-rules}
 \author{Jun-Hyup Kim \& Yeon-Min Jung}
@@ -364,9 +365,15 @@ The players will gain an amount of \polf\ equal to their \pol\ status which they
 \begin{description}
 \item[\actionCost{Trade}{1}] Pay \eraCost{2}{3}{4} Food to the Public Storage and move a single worker from your territory onto the ``Start'' space of a Trade Route you are connected to. In the case of a General Trade Route, only the player closest to the ``Start'' space may occupy it. Only a single worker can be on a General Trade Route at any given time. Allied Trade Routes may be occupied by one worker from each of the Allied Kingdoms.
 
-\item[\actionCost{Exchange}{1}] Exchange a single type of resource you own for another type of resource from the Public Storage. The relative value of the goods is as follows: 1 Mineral = 2 Food = 2 Money
+\iftoggle{original-rules}{
+\item[\actionCost{Exchange}{1}] Exchange a single type of resource you own for another type of resource from the Public Storage. The relative value of the goods is as follows: 1 Mineral = 2 Food = 2 Money.
 \end{description}
 \begin{BoxExample}It takes 1 political force to trade 5 Minerals for 10 Food. If you wanted to trade 5 Minerals for 6 Food and 4 Money, you would have to spend 2 political force to take the Exchange Action twice. It would not be possible to exchange 5 Minerals for 5 Food and 5 Money in just two Exchange actions.\end{BoxExample}
+}{
+\item[\actionCost{Exchange}{1}] You may Exchange a single type of resource you own into other resources from the Public Storage. The relative value of the goods is as follows: 1 Mineral = 2 Food = 2 Money. Each Exchange action allows you to convert from a number of resources of a single type equal to your \tra. 
+\end{description}
+\begin{BoxExample}If you have 1 political force and 3 \tra, you could exchange 3 Minerals for 6 Food or into 2 Money and 4 Food or into 5 Money and 1 Food. You could also exchange 3 Food into 1 Mineral and 1 Money, and so on. Having only 1 \tra\ would restrict those exchanges to only consuming a single Mineral or Food. Your \tra\ controls how many of the original resource you may exchange, the conversion values control how much and what you can get from that input.\end{BoxExample}
+}
 \begin{description}
 \item[\actionCost{Birth}{2}] Move one descendant from your Player Status Board and make him a worker in your territory. You always take the descendant from the lowest numbered space that is still covered. The cost for this action is {4/5/6} Food. You may place the worker on any Room in your territory. No Room may be occupied by more than one worker. If the Room the worker is placed in contains an Activity box (indicated by a gold border) it is immediately activated.
 \end{description}
