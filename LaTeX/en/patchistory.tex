@@ -51,6 +51,8 @@
 \newcommand\goods{Resources}
 \newcommand\polf{Political Favour}
 \newcommand\polfs{Political Favours}
+\newcommand\baseland{Baseland}
+\newcommand\baselands{Baselands}
 }{
 \newcommand\victorypoint{Culture}
 \newcommand\victorypoints{Culture}
@@ -64,6 +66,8 @@
 \newcommand\goods{Goods}
 \newcommand\polf{Political Point}
 \newcommand\polfs{Political Points}
+\newcommand\baseland{Capital Tile}
+\newcommand\baselands{Capital Tiles}
 }
 \newcommand\tra{Transport Level (TRA)}
 \newcommand\mil{Military Force (MIL)}
@@ -75,37 +79,31 @@
 \maketitle
 \tableofcontents
 \section{Game Story}
-\iftoggle{original-rules}{
-The mankind has evolved consistently over the great moments, and that great moments have been recorded through history.
-}{
-Our history has been forged in great moments. Those moments are told and retold for generations, creating a record of our struggles, our joys.
-}
 \iforiginal
+The mankind has evolved consistently over the great moments, and that great moments have been recorded through history.
 \begin{verbatim}We start a new record.
 We go back to those great moments,
 and choose the future of our own.
 We patch the history with new pieces
 of events of our own choices.\end{verbatim}
+Your country may have great men like Aristotle or Gandhi, or the grand monuments such as Pyramid and Eiffel Tower. Record your own history and build a kingdom greater than any other's, with Patchistory.
 \else
+Our history has been forged in great moments. Those moments are told and retold for generations, creating a record of our struggles, our joys.
 \begin{verbatim}Now we begin a new record.
 We return to those great moments,
 and create a new history.
 We will patch a new tapestry of events
 to forge a history of our choosing.\end{verbatim}
-\fi
-\iftoggle{original-rules}{
-Your country may have great men like Aristotle or Gandhi, or the grand monuments such as Pyramid and Eiffel Tower. Record your own history and build a kingdom greater than any other's, with Patchistory.
-}{
 Your civilisation may give rise to countless heroes such as Aristotle, Gandhi or Elizabeth I. You may construct dazzling Wonders like the Hanging Gardens, the Eiffel Tower, the Great Wall of China or many others.
 Create your own history and build the greatest civilisation our world has ever seen in - Patchistory.
-}
+\fi
 \section{Objective}
 Across three Eras, the players will develop their nations. The development and prosperity of their country will be represented by \victorypoints. At the end of Era III, the player with the most \victorypoints\ will be declared the winner.
 \section{Components}
 \section{Component Overview}
-\compHead{Baselands}
+\compHead{\baselands}
 \inlineImage{Baselands}
-Each baseland tile has two sides, Liberty (easier) and Equality (harder). The Liberty side is indicated by a small ``L'' icon and the Equality side by a small ``E'' icon. Select one of the two Baselands to start the game. You should not mix the Baseland types within a single game.
+Each \baseland\ has two sides, Liberty (easier) and Equality (harder). The Liberty side is indicated by a small ``L'' icon and the Equality side by a small ``E'' icon. Select one of the two \baselands\ to start the game. You should not mix the \baseland\ types within a single game.
 
 On the Liberty side, each player will have a different starting arrangement and 2 workers will be placed after the initial auction. On the Equality side, each player will have the same starting arrangement and 1 worker will be placed after the initial auction.
 \compHead{Icons}
@@ -176,10 +174,10 @@ The Timeline Board indicates the current round and which phase of the game is cu
 \end{tabular}
 \section{Initial Setup}
 \begin{itemize}
-\item If playing with Liberty Baselands, each player randomly chooses a Baseland to start with.
+\item If playing with Liberty \baselands, each player randomly chooses a \baseland\ to start with.
 \item Each player takes a Player Screen, a Player Status Board and the 8 worker pieces of the same colour.
 \item Each player places their 8 workers on the descendants section on the left hand side of their Player Status Board.
-\item Each player takes one of each of the seven different status markers and marks their current production levels on their Player Status Board according to their Baseland.
+\item Each player takes one of each of the seven different status markers and marks their current production levels on their Player Status Board according to their \baseland.
 \item Each player takes: 4 Food, 3 \money, 4 Random Construction Tiles and 20 \vps. These are all placed behind their Player Screen.
 \item Each player receives 3 random Prosperity cards.
 \item In a 3 or 4 player game, each player constructs a General Trade Route between their kingdom and the kingdom of the player to their left. In a 2 player game, no initial Trade Routes are placed.
@@ -189,7 +187,7 @@ The Timeline Board indicates the current round and which phase of the game is cu
 \item The remaining \goods\ should be placed near the play area in a Public Storage.
 \item The starting player will be the one who has most recently played a civilization game.
 \end{itemize}
-\begin{BoxExample}Given the Baseland shown below, the player should set up his Player Status Board as shown. 8 workers are placed on the Descendants track. 4 Food, 3 \money, 20 \vps\ and 4 Construction Tiles are placed behind the Player Screen. Finally one General Trade Route is placed facing the Kingdom on the left in a 3 or 4 player game.\end{BoxExample}
+\begin{BoxExample}Given the \baseland\ shown below, the player should set up his Player Status Board as shown. 8 workers are placed on the Descendants track. 4 Food, 3 \money, 20 \vps\ and 4 Construction Tiles are placed behind the Player Screen. Finally one General Trade Route is placed facing the Kingdom on the left in a 3 or 4 player game.\end{BoxExample}
 \section{Game Overview}
 The game is played across three Eras and each Era consists of five Rounds. During each Round, the following phases will be carried out in order:
 \begin{enumerate}
@@ -245,7 +243,7 @@ There are special rules for this phase in the first turn of the game. See 7.1.4 
 
 In this phase each player will purchase a Land Card at auction and patch it into their territory.
 
-``Patching'' means placing a Land Tile over or under your Baseland or other Land Cards in your territory.
+``Patching'' means placing a Land Tile over or under your \baseland\ or other Land Cards in your territory.
 
 \subsubsection{Arrange the Auction}
 \begin{enumerate}
@@ -337,7 +335,7 @@ Each player starts the game with 3 \money\ and a special auction is held in the 
 \item Turn over one last Land Card (alternate sides as usual). The last player \textbf{must} now bid on one of the face up Land Cards.
 \item From this point, follow the normal bidding process for an auction starting with the First Player again.
 \end{enumerate}
-Once the auction has concluded, patch the Land Card you have won and then immediately place workers according to the Baseland used (2 for Liberty, 1 for Equality). These workers are taken from the top of the descendants section of the Player Status Board and may be placed in any Room. There is a limit of 1 worker per room.
+Once the auction has concluded, patch the Land Card you have won and then immediately place workers according to the \baseland\ used (2 for Liberty, 1 for Equality). These workers are taken from the top of the descendants section of the Player Status Board and may be placed in any Room. There is a limit of 1 worker per room.
 \subsection{Diplomacy \& Management}
 In this phase players will use their Political Influence to take Diplomatic and Mangement actions. At the beginning of this phase, the players should check their \pol\ status on the Player Status Board.
 
