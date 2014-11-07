@@ -53,6 +53,7 @@
 \newcommand\polfs{Political Favours}
 \newcommand\baseland{Baseland}
 \newcommand\baselands{Baselands}
+\newcommand\psb{Player Status Board}
 }{
 \newcommand\victorypoint{Culture}
 \newcommand\victorypoints{Culture}
@@ -68,6 +69,7 @@
 \newcommand\polfs{Political Points}
 \newcommand\baseland{Capital Tile}
 \newcommand\baselands{Capital Tiles}
+\newcommand\psb{Reference Board}
 }
 \newcommand\tra{Transport Level (TRA)}
 \newcommand\mil{Military Force (MIL)}
@@ -112,15 +114,15 @@ On the Liberty side, each player will have a different starting arrangement and 
 \compHead{Player Screen}
 \inlineImage{PlayerScreen}
 Player Screens are used to hide your \goods, \vps\ and \money\ during the game. The Player Screen also contains a quick reference to the costs and rewards of war, the maintenance costs paid during the \myPhase{Maintain Heroes \& Wonders} phase and the actions that can be taken during the \myPhase{Diplomacy \& Management} phase.
-\compHead{Player Status Board}
+\compHead{\psb}
 \inlineImage{PlayerStatusBoard}
-The Player Status Board is divided into three sections. On the left is the descendants section where you will place your workers until they are born. This will also show the maintenance cost you must pay for your workers.
+The \psb\ is divided into three sections. On the left is the descendants section where you will place your workers until they are born. This will also show the maintenance cost you must pay for your workers.
 
 In the middle is a status track used to show your current Military Force, Political Influence and Transport Level.
 
 On the right is the production track used to track your overall production of \minerals, Food, \vps\ and \money.
 
-The status and production tracks are not intended to imply upper bounds, if you would run off the end of the track, use some mechanism to indicate that you have wrapped round. The Player Status Board should be placed in front of the Player Screen, visible to the other players.
+The status and production tracks are not intended to imply upper bounds, if you would run off the end of the track, use some mechanism to indicate that you have wrapped round. The \psb\ should be placed in front of the Player Screen, visible to the other players.
 \compHead{Land Cards}
 \inlineImage{LandCards}
 Both sides of the Land Cards are used during the game. One side will have a white era icon (hereafter referred to as the White Side) and one side will have a black era icon (hereafter referred to as the Black Side).
@@ -136,7 +138,7 @@ Trade Routes represent connections between different Kingdoms. Through Trade Rou
 Allied Trade Routes represent a strong Alliance between two Kingdoms. Once an Alliance is established, neither Kingdom may take any aggressive action (e.g. War or Threatening) without first breaking the Alliance. There can only be a single Allied Trade Route between any pair of Kingdoms.
 \compHead{Status Markers}
 \inlineImage{StatusMarkers}
-These markers are placed on the tracks of your Player Status Board to track the overall status of your Kingdom.
+These markers are placed on the tracks of your \psb\ to track the overall status of your Kingdom.
 \compHead{Prosperity Cards}
 \inlineImage{ProsperityCards}
 Prosperity Cards are played during the \myPhase{Vote} phase at the end of each era. The cards will reward players for their relative standings in either the production levels of a specific \good\ or their capacity (i.e. number) of a particular room type. There are a total of 15 cards covering different \goods\ and room types.
@@ -175,9 +177,9 @@ The Timeline Board indicates the current round and which phase of the game is cu
 \section{Initial Setup}
 \begin{itemize}
 \item If playing with Liberty \baselands, each player randomly chooses a \baseland\ to start with.
-\item Each player takes a Player Screen, a Player Status Board and the 8 worker pieces of the same colour.
-\item Each player places their 8 workers on the descendants section on the left hand side of their Player Status Board.
-\item Each player takes one of each of the seven different status markers and marks their current production levels on their Player Status Board according to their \baseland.
+\item Each player takes a Player Screen, a \psb\ and the 8 worker pieces of the same colour.
+\item Each player places their 8 workers on the descendants section on the left hand side of their \psb.
+\item Each player takes one of each of the seven different status markers and marks their current production levels on their \psb\ according to their \baseland.
 \item Each player takes: 4 Food, 3 \money, 4 Random Construction Tiles and 20 \vps. These are all placed behind their Player Screen.
 \item Each player receives 3 random Prosperity cards.
 \item In a 3 or 4 player game, each player constructs a General Trade Route between their kingdom and the kingdom of the player to their left. In a 2 player game, no initial Trade Routes are placed.
@@ -187,7 +189,7 @@ The Timeline Board indicates the current round and which phase of the game is cu
 \item The remaining \goods\ should be placed near the play area in a Public Storage.
 \item The starting player will be the one who has most recently played a civilization game.
 \end{itemize}
-\begin{BoxExample}Given the \baseland\ shown below, the player should set up his Player Status Board as shown. 8 workers are placed on the Descendants track. 4 Food, 3 \money, 20 \vps\ and 4 Construction Tiles are placed behind the Player Screen. Finally one General Trade Route is placed facing the Kingdom on the left in a 3 or 4 player game.\end{BoxExample}
+\begin{BoxExample}Given the \baseland\ shown below, the player should set up his \psb\ as shown. 8 workers are placed on the Descendants track. 4 Food, 3 \money, 20 \vps\ and 4 Construction Tiles are placed behind the Player Screen. Finally one General Trade Route is placed facing the Kingdom on the left in a 3 or 4 player game.\end{BoxExample}
 \section{Game Overview}
 The game is played across three Eras and each Era consists of five Rounds. During each Round, the following phases will be carried out in order:
 \begin{enumerate}
@@ -208,7 +210,7 @@ The game ends after the \myPhase{End of an Era} phase in Era III.
 
 \subsection{General Rules}
 \begin{itemize}
-\item The tracks on the Player Status Board are one of the most important pieces of information in the game. Their position will mostly change during the \myPhase{Patching Land Cards} and \myPhase{Movement} phases. Players should make every effort to ensure they are accurate and up to date at all times.
+\item The tracks on the \psb\ are one of the most important pieces of information in the game. Their position will mostly change during the \myPhase{Patching Land Cards} and \myPhase{Movement} phases. Players should make every effort to ensure they are accurate and up to date at all times.
 
 \item All tokens (\goods, \money, \vps, Construction Tiles) should be kept behind the Player Screens at all times.
 \iftoggle{original-rules}{
@@ -218,8 +220,11 @@ The game ends after the \myPhase{End of an Era} phase in Era III.
 }
 \item Portions of the game may be played simultaneously by all players. However, if a conflict in the order of actions should arise during one of these portions, play should be carried out starting with the player holding the First Player Marker and proceeding clockwise.
 
-\item ``R'' marked on a card means ``Produce the following \goodss\ each round during the \myPhase{Production \& Maintain Workers} phase''.
-
+\iftoggle{original-rules}{
+\item ``R'' marked on a card means ``Produce the following \goodss\ each round during the \myPhase{Production \& Maintain Workers} phase''. The effect of these abilities should be reflected on the \psb\ of the owning player.
+}{
+\item The small gear icon next to an ability on a card should be read as ``Produce the following \goodss\ each round during the \myPhase{Production \& Maintain Workers} phase''. The effect of these abilities should be reflected on the \psb\ of the owning player.
+}
 \item ``Cost -X'' on a card means you gain a \goodss\ discount for a particular cost.
 
 \item ``POL -X'' on a card means you lower the cost in \polfs\ for a particular action by the specified amount. The cost in \polfs\ for an action can never be reduced below 1.
@@ -230,7 +235,7 @@ The game ends after the \myPhase{End of an Era} phase in Era III.
 
 \item The \goodss\ tokens provided (with the exception of the Construction Tiles) are not intended to be a limit. Use alternative markers if any particular \good\ runs out during play.
 
-\item If a card or effect requires you to pay workers, you must move workers from your territory or from Trade Routes back to the Descendants section on your Player Status Board.
+\item If a card or effect requires you to pay workers, you must move workers from your territory or from Trade Routes back to the Descendants section on your \psb.
 
 \item ``Remove'' means take something out of the game completely (i.e. put it back in the box).
 \item Where the specific rules for a Hero or Wonder contradict the general rules, the rules for the Hero or Wonder take precedence.
@@ -319,9 +324,9 @@ Once you have won an auction, you must immediately patch the Land Card into your
 \item If you are placing a larger room over a series of smaller rooms, each of which contains a worker, all workers will remain in the new room. During the next movement phase, you must move workers out of the room until at most one remains.
 \item Land Cards are immediately active from the moment they are placed.
 \end{itemize}
-You should now update your Player Status Board to take account of the new arrangement.
+You should now update your \psb\ to take account of the new arrangement.
 \begin{BoxExample}
-A Kingdom with CUL 1, POL 1, ECO 1, MIL 1, TRA 1 and Food1, patched a Land Card over the Industry Room and should now adjust the Player Status Board to show CUL 1, POL 2, ECO 1, MIL 1, TRA 1 and \minerals\ 1.
+A Kingdom with CUL 1, POL 1, ECO 1, MIL 1, TRA 1 and Food1, patched a Land Card over the Industry Room and should now adjust the \psb\ to show CUL 1, POL 2, ECO 1, MIL 1, TRA 1 and \minerals\ 1.
 \end{BoxExample}
 
 
@@ -335,9 +340,9 @@ Each player starts the game with 3 \money\ and a special auction is held in the 
 \item Turn over one last Land Card (alternate sides as usual). The last player \textbf{must} now bid on one of the face up Land Cards.
 \item From this point, follow the normal bidding process for an auction starting with the First Player again.
 \end{enumerate}
-Once the auction has concluded, patch the Land Card you have won and then immediately place workers according to the \baseland\ used (2 for Liberty, 1 for Equality). These workers are taken from the top of the descendants section of the Player Status Board and may be placed in any Room. There is a limit of 1 worker per room.
+Once the auction has concluded, patch the Land Card you have won and then immediately place workers according to the \baseland\ used (2 for Liberty, 1 for Equality). These workers are taken from the top of the descendants section of the \psb\ and may be placed in any Room. There is a limit of 1 worker per room.
 \subsection{Diplomacy \& Management}
-In this phase players will use their Political Influence to take Diplomatic and Mangement actions. At the beginning of this phase, the players should check their \pol\ status on the Player Status Board.
+In this phase players will use their Political Influence to take Diplomatic and Mangement actions. At the beginning of this phase, the players should check their \pol\ status on the \psb.
 
 \statExplain{\pol}{number of active books in the territory}
 
@@ -397,7 +402,7 @@ The players will gain an amount of \polfs\ equal to their \pol\ status which the
 \begin{BoxExample}If you have 1 \polf\ and 3 \tra, you could exchange 3 \minerals\ for 6 Food or into 2 \money\ and 4 Food or into 5 \money\ and 1 Food. You could also exchange 3 Food into 1 \mineral\ and 1 \money, and so on. Having only 1 \tra\ would restrict those exchanges to only consuming a single \mineral\ or Food. Your \tra\ controls how many of the original \good\ you may exchange, the conversion values control how much and what you can get from that input.\end{BoxExample}
 }
 \begin{description}
-\item[\actionCost{Birth}{2}] Move one descendant from your Player Status Board and make him a worker in your territory. You always take the descendant from the lowest numbered space that is still covered. The cost for this action is {4/5/6} Food. You may place the worker on any Room in your territory. No Room may be occupied by more than one worker. If the Room the worker is placed in contains an Activity box (indicated by a gold border) it is immediately activated.
+\item[\actionCost{Birth}{2}] Move one descendant from your \psb\ and make him a worker in your territory. You always take the descendant from the lowest numbered space that is still covered. The cost for this action is {4/5/6} Food. You may place the worker on any Room in your territory. No Room may be occupied by more than one worker. If the Room the worker is placed in contains an Activity box (indicated by a gold border) it is immediately activated.
 \end{description}
 
 \subsubsection*{\textit{Worship Actions}}
@@ -525,7 +530,7 @@ Once the war is over, the worker which triggered the war is immediately moved to
 In the production phase each player takes \goods\ from the Public Storage according to the production from their territory and any trade routes they occupy.
 
 \subsubsection*{\textit{Buildings, Heroes \& Wonders}}
-Ensure the positions of the tokens on the production section of the Player Status Board are correct.
+Ensure the positions of the tokens on the production section of the \psb\ are correct.
 
 Production tokens are only adjusted based on the active symbols in the Rooms in your territory. Symbols outside of Activity Boxes are always active as long as they have not been patched over. Symbols inside of Activity Boxes are only considered active if there is also a worker in the room.
 
@@ -534,10 +539,10 @@ Symbols on Heroes and Wonders are always considered to be active and do not requ
 Finally, based on the position of each production token, take the specified amount of the appropriate \good\ from the Public Storage and place it behind your Player Screen.
 
 \subsubsection*{\textit{Trade Routes}}
-In addition, the player should take the \goodss\ indicated by any Trade Route spaces occupied by their workers. Note that Trade Route spaces do not affect the production section of the Player Status Board.
+In addition, the player should take the \goodss\ indicated by any Trade Route spaces occupied by their workers. Note that Trade Route spaces do not affect the production section of the \psb.
 
 \subsubsection{Maintain Workers}
-In this step, you must feed your workers. The amount of Food you must pay is indicated by the highest uncovered number in the descendant section of the Player Status Board.
+In this step, you must feed your workers. The amount of Food you must pay is indicated by the highest uncovered number in the descendant section of the \psb.
 
 If you have enough food, you must pay the full amount. If you do not have enough food, you must pay what you can and then additionally pay 3 \vps\ for every Food you were short.
 
@@ -568,19 +573,19 @@ Here is a breakdown of the different Prosperity Cards in the game:
 \begin{description}
 \item[Maximum Capacity - General Building:] Rank the players according to the number of General Building rooms in their territory. General Buildings are Culture, Traffic, Industry, Politics, Economy, and Military. Special Buildings (the ones with a white background), Water, Wasteland, Heroes, or Wonders are not included. General Buildings which have been patched over do not count.
 \item[Maximum Capacity - Hero:] Rank the players according to the number of Heroes in their territory. Heroes which have been patched over do not count.
-\item[Maximum Capacity - Military:] Rank the players according to their current \mil\ as shown on their Player Status Board. This should equal the number of active swords in their territory along with any bonuses from Heroes or Wonders. Shields are not counted.
-\item[Maximum Capacity - Politics:] Rank the players according to their current \pol\ as shown on their Player Status Board. This should equal the number of active books in their territory along with any bonuses from Heroes or Wonders.
+\item[Maximum Capacity - Military:] Rank the players according to their current \mil\ as shown on their \psb. This should equal the number of active swords in their territory along with any bonuses from Heroes or Wonders. Shields are not counted.
+\item[Maximum Capacity - Politics:] Rank the players according to their current \pol\ as shown on their \psb. This should equal the number of active books in their territory along with any bonuses from Heroes or Wonders.
 \item[Maximum Capacity - Special Building:] Rank the players according to the number of Special Building rooms in their territory. Special Buildings are the ones with a white background. General Buildings, Water, Wasteland, Heroes, or Wonders are not included. Special Buildings which have been patched over do not count.
 \item[Maximum Capacity - Trade Routes:] Rank the players according to the number of Trade Routes connected to their kingdom. You only count General Trade Routes which you constructed (i.e. ones where the ``Start'' space is next to your Kingdom) but you count all Allied Trade Routes connected to your Kingdom regardless of who constructed them.
-\item[Maximum Capacity - Transport:] Rank the players according to their current \tra\ as shown on their Player Status Board. This should equal the number of active wheels in their territory along with any bonuses from Heroes or Wonders.
+\item[Maximum Capacity - Transport:] Rank the players according to their current \tra\ as shown on their \psb. This should equal the number of active wheels in their territory along with any bonuses from Heroes or Wonders.
 \item[Maximum Capacity - Wasteland:] Rank the players according to the number of Wasteland rooms in their territory. Wastelands which have been patched over do not count.
 \item[Maximum Capacity - Water:] Rank the players according to the number of Water rooms in their territory. Water which has been patched over does not count.
 \item[Maximum Capacity - Wonder:] Rank the players according to the number of Wonders in their territory. Wonders which have been patched over do not count.
 \item[Maximum Capacity - Worker:] Rank the players according to the number of workers in their kingdom. This includes any workers on Trade Routes.
-\item[Maximum Production - Culture:] Rank the players according to their current \victorypoint\ production as shown on their Player Status Board. This should equal the number of active \victorypoint\ icons in their territory along with any bonuses from Heroes or Wonders.
-\item[Maximum Production - Food:] Rank the players according to their current Food production as shown on their Player Status Board. This should equal the number of active Food icons in their territory along with any bonuses from Heroes or Wonders.
-\item[Maximum Production - \mineral:] Rank the players according to their current \mineral\ production as shown on their Player Status Board. This should equal the number of active \mineral\ icons in their territory along with any bonuses from Heroes or Wonders.
-\item[Maximum Production - \money:] Rank the players according to their current \money\ production as shown on their Player Status Board. This should equal the number of active coin icons in their territory along with any bonuses from Heroes or Wonders.
+\item[Maximum Production - Culture:] Rank the players according to their current \victorypoint\ production as shown on their \psb. This should equal the number of active \victorypoint\ icons in their territory along with any bonuses from Heroes or Wonders.
+\item[Maximum Production - Food:] Rank the players according to their current Food production as shown on their \psb. This should equal the number of active Food icons in their territory along with any bonuses from Heroes or Wonders.
+\item[Maximum Production - \mineral:] Rank the players according to their current \mineral\ production as shown on their \psb. This should equal the number of active \mineral\ icons in their territory along with any bonuses from Heroes or Wonders.
+\item[Maximum Production - \money:] Rank the players according to their current \money\ production as shown on their \psb. This should equal the number of active coin icons in their territory along with any bonuses from Heroes or Wonders.
 \end{description}
 Once the players have ranked themselves appropriately, they then receive points according to the number of votes on the card:
 
@@ -645,7 +650,7 @@ Wonder and Hero effects only last as long as the Wonder or Hero in question is i
 \item[Colosseum:] When taking the \myAction{Campaign} action, in addition to the votes you also receive 1 \vp\ and 2 \money\ from the Public Storage.
 \item[Colossus of Rhodes:] After winning a war (either as an Invader or as a defender), gain an additional 3 \vps.
 \item[The Great Wall:] You are considered to have 1 additional active shield per worker you have, whether in your territory or on a Trade Route. When an opponent threatens you, you should reduce the \goods\ you must pay by 1.
-\item[Hanging Gardens of Babylon:] During the Production step, gain 1 \vp\ per water room in your kingdom. When patched, remove one descendant from your Player Status Board and return it to the box. You always take the descendant from the lowest numbered space that is still covered, as such, this will result in an increase in maintenance costs.
+\item[Hanging Gardens of Babylon:] During the Production step, gain 1 \vp\ per water room in your kingdom. When patched, remove one descendant from your \psb\ and return it to the box. You always take the descendant from the lowest numbered space that is still covered, as such, this will result in an increase in maintenance costs.
 \item[Lighthouse of Alexandria:] Any player who acts as invader against the kingdom containing the Lighthouse of Alexandria must pay an additional \mineral\ for war preparation. This means the cost of war preparation becomes \eraCost{1}{2}{3}.
 \item[Parthenon:] During the production step, you gain 1 \vp\ for every two Economy buildings you have (round down). In addition, no other player can take \money\ from you using the \myAction{Threaten} action.
 \item[Petra:] During the production step, gain 1 \money\ for each trade route connected to your kingdom. Note that only General Trade Routes constructed by you (i.e. ones where the ``Start'' space is next to your kingdom) count. All Allied trade routes count.
@@ -678,7 +683,7 @@ Wonder and Hero effects only last as long as the Wonder or Hero in question is i
 \end{description}
 \subsection{Era II Heroes}
 \begin{description}
-\item[Christopher Columbus:] In the Production step, you gain 1 Food per water room in your territory. When patched, remove one descendant from your Player Status Board and return it to the box. You always take the descendant from the lowest numbered space that is still covered, as such, this will result in an increase in maintenance costs.
+\item[Christopher Columbus:] In the Production step, you gain 1 Food per water room in your territory. When patched, remove one descendant from your \psb\ and return it to the box. You always take the descendant from the lowest numbered space that is still covered, as such, this will result in an increase in maintenance costs.
 \item[Elizabeth I:] Your \mil\ is increased by 2 for each Water Room in your territory occupied by one of your workers. After the \myPhase{Vote} phase, you retain any unused votes instead of returning them to the Public Storage.
 \item[Genghis Khan:] Your \mil\ is increased by 1 for each trade route connected to your kingdom. Note that only General Trade Routes constructed by you (i.e. ones where the ``Start'' space is next to your kingdom) count. All Allied trade routes count.
 \item[Jeanne d'Arc:] When taking the \myAction{Campaign} action, gain an additional 2 votes. During a War, you may use 2 votes as 1 \mineral\ when boosting your Strength.
@@ -686,7 +691,7 @@ Wonder and Hero effects only last as long as the Wonder or Hero in question is i
 \item[Napoleon Bonaparte:] Whenever you win a war, you may immediately carry out a \myAction{Threaten} action on the losing side. This action succeeds regardless of the relative Military Forces involved. This action does not cost any \polfs.
 \item[Vasco da Gama:] Once per game, during the \myPhase{Auction} phase, after the Land Cards are revealed but before any bidding takes place you may select one of the Land Cards and take it for free. You do not then participate in that auction round, but may patch the Land Card as normal. In addition, the \polfs\ cost of taking the \myAction{Exchange} action is set to 0.
 \item[William Shakespeare:] During the Production step, gain 1 \money\ for every Culture building in your territory.
-\item[Yi Sun-sin:] Your \mil\ is increased by 1 for each Water Room in your territory. When patched, remove one descendant from your Player Status Board and return it to the box. You always take the descendant from the lowest numbered space that is still covered, as such, this will result in an increase in maintenance costs.
+\item[Yi Sun-sin:] Your \mil\ is increased by 1 for each Water Room in your territory. When patched, remove one descendant from your \psb\ and return it to the box. You always take the descendant from the lowest numbered space that is still covered, as such, this will result in an increase in maintenance costs.
 \end{description}
 \subsection{Era III Wonders}
 \begin{description}
