@@ -8,8 +8,12 @@
 \usepackage{enumitem} % For resuming enums
 \usepackage{eso-pic}
 \usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{etoolbox} % for conditional toggles
 \usepackage[title,titletoc,toc]{appendix}
 \geometry{a4paper}
+
+\newtoggle{original-rules}
+\toggletrue{original-rules}
 
 \newcommand\BackgroundPic{
 \put(0,0){
@@ -23,7 +27,11 @@ keepaspectratio]{background}%
 \graphicspath{{../../imgs/}}
 \title{\textbf{Patchistory}}
 \author{Jun-Hyup Kim \& Yeon-Min Jung}
-\date{v1.2 2014-01-25}
+\iftoggle{original-rules}{
+\date{v1.3orig 2014-11-10}
+}{
+\date{v1.3sk 2014-11-10}
+}
 \begin{document}
 \AddToShipoutPicture{\BackgroundPic}
 \definecolor{TFFrameColor}{gray}{0.5}
@@ -328,7 +336,7 @@ The players will gain an amount of \polf\ equal to their \pol\ status which they
 \subsubsection{Management Actions}
 \subsubsection*{\textit{General Actions}}
 \begin{description}
-\item[\actionCost{Trade}{1}] Move a single worker from your territory onto the ``Start'' space of a Trade Route you are connected to. In the case of a General Trade Route, only the player closest to the ``Start'' space may occupy it. Only a single worker can be on a General Trade Route at any given time. Allied Trade Routes may be occupied by one worker from each of the Allied Kingdoms.
+\item[\actionCost{Trade}{1}] Pay \eraCost{2}{3}{4} Food to the Public Storage and move a single worker from your territory onto the ``Start'' space of a Trade Route you are connected to. In the case of a General Trade Route, only the player closest to the ``Start'' space may occupy it. Only a single worker can be on a General Trade Route at any given time. Allied Trade Routes may be occupied by one worker from each of the Allied Kingdoms.
 
 \item[\actionCost{Exchange}{1}] Exchange a single type of resource you own for another type of resource from the Public Storage. The relative value of the goods is as follows: 1 Mineral = 2 Food = 2 Money
 \end{description}
