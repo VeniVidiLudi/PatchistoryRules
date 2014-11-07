@@ -342,7 +342,12 @@ The players will gain an amount of \polf\ equal to their \pol\ status which they
 \statExplain{Attack Force}{\mil}
 \statExplain{Defensive Force}{\mil\ + Number of active shields in your territory.}
 \begin{itemize}
+\iftoggle{original-rules}{
 \item If your Attack Force is sufficient, you may demand either \eraCost{3}{4}{5} Money or \eraCost{2}{3}{4} \vps. The player being threatened must pay if possible.
+}{
+\item If your Attack Force is higher than your opponents Defensive Force, you may demand either 3 Money or 2 \vps. The player being threatened must pay if possible.
+\item If your Attack Force is 5 or more points higher than your opponents Defensive force, the demanded amounts increase to 5 Money or 4 \vps. The player being threatened must pay if possible.
+}
 \item If the player being threatened lacks sufficient resources to pay, they must pay whatever amount of the requested resource they have.
 \end{itemize}
 
