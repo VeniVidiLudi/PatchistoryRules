@@ -15,9 +15,13 @@
 \graphicspath{{../../imgs/}}
 \title{\textbf{Patchistory}}
 \newif\iforiginal
-\originalfalse
 \newtoggle{original-rules}
 \togglefalse{original-rules}
+\iftoggle{original-rules}{
+\originaltrue
+}{
+\originalfalse
+}
 \author{Jun-Hyup Kim \& Yeon-Min Jung}
 \iftoggle{original-rules}{
 \date{v1.3orig 2014-11-10}
@@ -61,17 +65,19 @@ The mankind has evolved consistently over the great moments, and that great mome
 }{
 Our history has been forged in great moments. Those moments are told and retold for generations, creating a record of our struggles, our joys.
 }
-\iftoggle{original-rules}{We start a new record.
+\iforiginal
+\begin{verbatim}We start a new record.
 We go back to those great moments,
 and choose the future of our own.
 We patch the history with new pieces
-of events of our own choices.
-}{Now we begin a new record.
+of events of our own choices.\end{verbatim}
+\else
+\begin{verbatim}Now we begin a new record.
 We return to those great moments,
 and create a new history.
 We will patch a new tapestry of events
-to forge a history of our choosing.
-}
+to forge a history of our choosing.\end{verbatim}
+\fi
 \iftoggle{original-rules}{
 Your country may have great men like Aristotle or Gandhi, or the grand monuments such as Pyramid and Eiffel Tower. Record your own history and build a kingdom greater than any other's, with Patchistory.
 }{
