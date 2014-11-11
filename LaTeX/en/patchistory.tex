@@ -54,6 +54,9 @@
 \newcommand\baseland{Baseland}
 \newcommand\baselands{Baselands}
 \newcommand\psb{Player Status Board}
+\newcommand\landcard{Land Card}
+\newcommand\landcards{Land Cards}
+\newcommand\traffic{Traffic}
 }{
 \newcommand\victorypoint{Culture}
 \newcommand\victorypoints{Culture}
@@ -70,6 +73,9 @@
 \newcommand\baseland{Capital Tile}
 \newcommand\baselands{Capital Tiles}
 \newcommand\psb{Reference Board}
+\newcommand\landcard{Terrain Tile}
+\newcommand\landcards{Terrain Tiles}
+\newcommand\traffic{Transport}
 }
 \newcommand\tra{Transport Level (TRA)}
 \newcommand\mil{Military Force (MIL)}
@@ -123,13 +129,13 @@ In the middle is a status track used to show your current Military Force, Politi
 On the right is the production track used to track your overall production of \minerals, Food, \vps\ and \money.
 
 The status and production tracks are not intended to imply upper bounds, if you would run off the end of the track, use some mechanism to indicate that you have wrapped round. The \psb\ should be placed in front of the Player Screen, visible to the other players.
-\compHead{Land Cards}
+\compHead{\landcards}
 \inlineImage{LandCards}
-Both sides of the Land Cards are used during the game. One side will have a white era icon (hereafter referred to as the White Side) and one side will have a black era icon (hereafter referred to as the Black Side).
+Both sides of the \landcards\ are used during the game. One side will have a white era icon (hereafter referred to as the White Side) and one side will have a black era icon (hereafter referred to as the Black Side).
 
 On the White side you will find the coloured, General Buildings, some of which will have Activity Boxes (indicated by a golden frame). On the Black Side you will find the white-coloured Special Buildings along with Heroes and Wonders.
 
-Land Cards are divided up into one or more Rooms of varying sizes. A Room which occupies one quarter of a Land Card is the most basic unit of size and is referred to as a 1x1 room. Each Room may hold at most one worker.
+\landcards\ are divided up into one or more Rooms of varying sizes. A Room which occupies one quarter of a \landcard\ is the most basic unit of size and is referred to as a 1x1 room. Each Room may hold at most one worker.
 \compHead{Trade Routes}
 \inlineImage{GeneralTradeRoute}
 \inlineImage{AlliedTradeRoute}
@@ -185,7 +191,7 @@ The Timeline Board indicates the current round and which phase of the game is cu
 \item In a 3 or 4 player game, each player constructs a General Trade Route between their kingdom and the kingdom of the player to their left. In a 2 player game, no initial Trade Routes are placed.
 \item The remaining General Trade Routes are placed near the play area in the Public Storage.
 \item The remaining Construction Tiles are placed Wasteland-side up and shuffled.
-\item The Land Cards should be sorted by Era, and the deck for each Era should be shuffled well.
+\item The \landcards\ should be sorted by Era, and the deck for each Era should be shuffled well.
 \item The remaining \goods\ should be placed near the play area in a Public Storage.
 \item The starting player will be the one who has most recently played a civilization game.
 \end{itemize}
@@ -193,7 +199,7 @@ The Timeline Board indicates the current round and which phase of the game is cu
 \section{Game Overview}
 The game is played across three Eras and each Era consists of five Rounds. During each Round, the following phases will be carried out in order:
 \begin{enumerate}
-\item Auction \& Patching Land Cards
+\item Auction \& Patching \landcards
 \item Diplomacy \& Management (Domestic Politics)
 \item Movement
 \item Negotiation \& War
@@ -210,7 +216,7 @@ The game ends after the \myPhase{End of an Era} phase in Era III.
 
 \subsection{General Rules}
 \begin{itemize}
-\item The tracks on the \psb\ are one of the most important pieces of information in the game. Their position will mostly change during the \myPhase{Patching Land Cards} and \myPhase{Movement} phases. Players should make every effort to ensure they are accurate and up to date at all times.
+\item The tracks on the \psb\ are one of the most important pieces of information in the game. Their position will mostly change during the \myPhase{Patching \landcards} and \myPhase{Movement} phases. Players should make every effort to ensure they are accurate and up to date at all times.
 
 \item All tokens (\goods, \money, \vps, Construction Tiles) should be kept behind the Player Screens at all times.
 \iftoggle{original-rules}{
@@ -241,20 +247,20 @@ The game ends after the \myPhase{End of an Era} phase in Era III.
 \item Where the specific rules for a Hero or Wonder contradict the general rules, the rules for the Hero or Wonder take precedence.
 \end{itemize}
 \section{Playing the game}
-\subsection{Auction \& Patching Land Cards}
+\subsection{Auction \& Patching \landcards}
 These instructions are for a 3 or 4 player game.
 
 There are special rules for this phase in the first turn of the game. See 7.1.4 for details.
 
-In this phase each player will purchase a Land Card at auction and patch it into their territory.
+In this phase each player will purchase a \landcard\ at auction and patch it into their territory.
 
-``Patching'' means placing a Land Tile over or under your \baseland\ or other Land Cards in your territory.
+``Patching'' means placing a \landcard\ over or under your \baseland\ or other \landcards\ in your territory.
 
 \subsubsection{Arrange the Auction}
 \begin{enumerate}
-\item Draw a Land Card from the appropriate deck for the current Era and place it with a random side facing up on the table (it may help to pick up the deck and deal from the bottom).
+\item Draw a \landcard\ from the appropriate deck for the current Era and place it with a random side facing up on the table (it may help to pick up the deck and deal from the bottom).
 \item If the face up side of the card is White, place the next card with its Black side face up. If the first card had its Black side face up, place the next card White side face up.
-\item Continue in this way, alternating Black and White sides, until you have placed as many Land Cards as there are players in the game.
+\item Continue in this way, alternating Black and White sides, until you have placed as many \landcards\ as there are players in the game.
 \iftoggle{original-rules}{}{
 \item If playing with 3 players, keep track of the colour the round started with and start the next round with the opposite colour. So if one round comes up White-Black-White, the following round should be Black-White-Black, the round after that White-Black-White again and so on.
 }
@@ -269,37 +275,37 @@ All players must now participate in the auction. If, at this point, any player h
 The auction starts with the player holding the First Player Marker and proceeds clockwise. On your turn, what you can do depends on your current situation:
 \begin{itemize}
 \item If you have the highest bid on a card, you do nothing this turn.
-\item If you have no bid on any card, you must place a bid on a card. To do so, take some amount of \money\ and place it on one of the Land Cards (to make it easier to tell who made which bid, it can be helpful to place it on the corner of the card closest to you). If any other player has already bid on a card, you must place a higher bid or bid on a different card.
-\item If you had a bid on a Land Card but have now been outbid by another player, you must either increase your bid to exceed the current highest bid on the card, or take your original bid and move it to another Land Card. You may increase your bid at this point, but may not reduce it. Once again, if any other player has already bid on a card, you must place a higher bid or bid on a different card.
+\item If you have no bid on any card, you must place a bid on a card. To do so, take some amount of \money\ and place it on one of the \landcards\ (to make it easier to tell who made which bid, it can be helpful to place it on the corner of the card closest to you). If any other player has already bid on a card, you must place a higher bid or bid on a different card.
+\item If you had a bid on a \landcard\ but have now been outbid by another player, you must either increase your bid to exceed the current highest bid on the card, or take your original bid and move it to another \landcard. You may increase your bid at this point, but may not reduce it. Once again, if any other player has already bid on a card, you must place a higher bid or bid on a different card.
 \end{itemize}
-Once each of the players has the highest bid on a single Land Card, the auction is over. All bids go to the Public Storage. The winner of each Land Card takes the card and must immediately patch it into their territory (see 7.1.3).
+Once each of the players has the highest bid on a single \landcard, the auction is over. All bids go to the Public Storage. The winner of each \landcard\ takes the card and must immediately patch it into their territory (see 7.1.3).
 
 Notes:
 \begin{itemize}
-\item Players may only bid on a single Land Card at one time.
+\item Players may only bid on a single \landcard\ at one time.
 \item Bids may be increased but never reduced.
 \end{itemize}
 \begin{BoxExample}
 Player order for the auction: Gandhi - Alexander - Lee Sun Sin - Bismark:
 \begin{enumerate}
-\item Gandhi bids 3 \money\ on Land Card A.
-\item Alexander bids 1 \money\ on Land Card B.
-\item Lee Sun Sin bids 1 \money\ on Land Card C.
-\item Bismark wants Land Card A, so he bids 4 \money\ on A.
-\item Gandhi isn't willing to let go of Land Card A, so he adds 2 \money\ to his existing bid of 3 for a total of 5, outbidding Bismark.
-\item Bismark doesn't think Land Card A is worth 6 \money\ so he moves his bid from Land Card A to Land Card B, outbidding Alexander.
-\item Alexander has no more \money\ to raise his bid, so he moves his \money\ from Land Card B to Land Card D.
-\item All players have one successful bid on a Land Card so the auction is over.
+\item Gandhi bids 3 \money\ on \landcard\ A.
+\item Alexander bids 1 \money\ on \landcard\ B.
+\item Lee Sun Sin bids 1 \money\ on \landcard\ C.
+\item Bismark wants \landcard\ A, so he bids 4 \money\ on A.
+\item Gandhi isn't willing to let go of \landcard\ A, so he adds 2 \money\ to his existing bid of 3 for a total of 5, outbidding Bismark.
+\item Bismark doesn't think \landcard\ A is worth 6 \money\ so he moves his bid from \landcard\ A to \landcard\ B, outbidding Alexander.
+\item Alexander has no more \money\ to raise his bid, so he moves his \money\ from \landcard\ B to \landcard\ D.
+\item All players have one successful bid on a \landcard\ so the auction is over.
 \end{enumerate}
 \inlineImage{AuctionExample}
 \end{BoxExample}
 
 
-\subsubsection{Patching Land Cards}
-Once you have won an auction, you must immediately patch the Land Card into your territory. The following restrictions apply:
+\subsubsection{Patching \landcards}
+Once you have won an auction, you must immediately patch the \landcard\ into your territory. The following restrictions apply:
 \begin{itemize}
 \item The card you have won must be patched with at least some portion either over or under at least one room of one of the cards already in your territory.
-\item Land Cards must all be oriented the same way, such that all the text on the cards aligns.
+\item \landcards\ must all be oriented the same way, such that all the text on the cards aligns.
 \item Rooms which are larger than 1x1 cannot be partially covered: you must either leave the entire room uncovered or cover the entire room.
 \end{itemize}
 \inlineImage{NoPartial}
@@ -311,7 +317,7 @@ Once you have won an auction, you must immediately patch the Land Card into your
 \begin{itemize}
 \item Once patched, no tile may be patched under a water room.
 \item Water rooms may not be patched in such that they are adjacent to one another.
-\item It is possible to patch a Land Card inbetween two other Land Cards such that part of it is patched on top of one Land Card and part of it is patched below another Land Card. However, you may not patch a card in between a Land Card and a Construction Tile that sits on that Land Card.
+\item It is possible to patch a \landcard\ inbetween two other \landcards\ such that part of it is patched on top of one \landcard\ and part of it is patched below another \landcard. However, you may not patch a card in between a \landcard\ and a Construction Tile that sits on that \landcard.
 \end{itemize}
 \inlineImage[4.5cm]{NoInbetween}
 \begin{itemize}
@@ -319,14 +325,14 @@ Once you have won an auction, you must immediately patch the Land Card into your
 \end{itemize}
 \inlineImage{TerritoryLimit}
 \begin{itemize}
-\item You may discard the Land Card if it is not possible to patch it in legally. You may also choose to discard any card you do not wish to patch in, even if a legal patching exists.
-\item If there is a worker on a room, and another Land Card is patched on top of that room, the worker remains in the same place and will sit on the new Land Card after patching.
+\item You may discard the \landcard\ if it is not possible to patch it in legally. You may also choose to discard any card you do not wish to patch in, even if a legal patching exists.
+\item If there is a worker on a room, and another \landcard\ is patched on top of that room, the worker remains in the same place and will sit on the new \landcard\ after patching.
 \item If you are placing a larger room over a series of smaller rooms, each of which contains a worker, all workers will remain in the new room. During the next movement phase, you must move workers out of the room until at most one remains.
-\item Land Cards are immediately active from the moment they are placed.
+\item \landcards\ are immediately active from the moment they are placed.
 \end{itemize}
 You should now update your \psb\ to take account of the new arrangement.
 \begin{BoxExample}
-A Kingdom with CUL 1, POL 1, ECO 1, MIL 1, TRA 1 and Food1, patched a Land Card over the Industry Room and should now adjust the \psb\ to show CUL 1, POL 2, ECO 1, MIL 1, TRA 1 and \minerals\ 1.
+A Kingdom with CUL 1, POL 1, ECO 1, MIL 1, TRA 1 and Food1, patched a \landcard\ over the Industry Room and should now adjust the \psb\ to show CUL 1, POL 2, ECO 1, MIL 1, TRA 1 and \minerals\ 1.
 \end{BoxExample}
 
 
@@ -334,13 +340,13 @@ A Kingdom with CUL 1, POL 1, ECO 1, MIL 1, TRA 1 and Food1, patched a Land Card 
 These instructions are for a 3 or 4 player game.
 Each player starts the game with 3 \money\ and a special auction is held in the first round to ensure fairness. 
 \begin{enumerate}
-\item Turn over a Land Card and place it with a random side face up. The First Player decides whether to bid on the Land Card or whether to wait and see what else come up.
-\item Turn over a second Land Card (placing it with the opposite side face up as in the normal auction rules). Now the second player may choose to bid on either of the first two Land Cards (outbidding the First Player if possible/necessary) or wait and see what else comes up.
-\item (Only in a 4p game) Turn over a third Land Card (alternating the face up side again). Now the third player may choose to bid on any one of the three face up tiles (outbidding the other players if necessary) or wait and see.
-\item Turn over one last Land Card (alternate sides as usual). The last player \textbf{must} now bid on one of the face up Land Cards.
+\item Turn over a \landcard\ and place it with a random side face up. The First Player decides whether to bid on the \landcard\ or whether to wait and see what else come up.
+\item Turn over a second \landcard\ (placing it with the opposite side face up as in the normal auction rules). Now the second player may choose to bid on either of the first two \landcards\ (outbidding the First Player if possible/necessary) or wait and see what else comes up.
+\item (Only in a 4p game) Turn over a third \landcard\ (alternating the face up side again). Now the third player may choose to bid on any one of the three face up tiles (outbidding the other players if necessary) or wait and see.
+\item Turn over one last \landcard\ (alternate sides as usual). The last player \textbf{must} now bid on one of the face up \landcards.
 \item From this point, follow the normal bidding process for an auction starting with the First Player again.
 \end{enumerate}
-Once the auction has concluded, patch the Land Card you have won and then immediately place workers according to the \baseland\ used (2 for Liberty, 1 for Equality). These workers are taken from the top of the descendants section of the \psb\ and may be placed in any Room. There is a limit of 1 worker per room.
+Once the auction has concluded, patch the \landcard\ you have won and then immediately place workers according to the \baseland\ used (2 for Liberty, 1 for Equality). These workers are taken from the top of the descendants section of the \psb\ and may be placed in any Room. There is a limit of 1 worker per room.
 \subsection{Diplomacy \& Management}
 In this phase players will use their Political Influence to take Diplomatic and Mangement actions. At the beginning of this phase, the players should check their \pol\ status on the \psb.
 
@@ -352,7 +358,7 @@ The players will gain an amount of \polfs\ equal to their \pol\ status which the
 \item Each player will get one opportunity to take Diplomacy actions, although they may take multiple Diplomacy actions at once.
 \item Once all players have had a chance to take Diplomacy actions, they will move onto Management.
 \item In general the Management phase can be conducted simultaneously, however, if conflicts do arise, conduct the Management actions in clockwise order starting with the First Player. Each player takes all the Management actions they want before the next player goes.
-\item Land Cards may reduce the cost in \polfs\ of an action to 1, but never less. Some cards may however \textit{set} the cost in \polfs\ to 0.
+\item \landcards\ may reduce the cost in \polfs\ of an action to 1, but never less. Some cards may however \textit{set} the cost in \polfs\ to 0.
 \item Whenever you see a cost written like this \eraCost{X}{Y}{Z} it means the cost in \goods\ is X in Era I, Y in Era II and Z in Era III.
 \item The number in parentheses after each action name indicates the cost in \polfs\ to take that action. The same information is indicated by the purple dots beside each action on the player summary.
 \item \polfs\ are not refreshed between the Diplomacy and Management phases.
@@ -421,11 +427,11 @@ The players will gain an amount of \polfs\ equal to their \pol\ status which the
 \item Once the supply of General Trade Routes has been exhausted, this action may no longer be taken.
 \end{itemize}
 \item[\actionCost{Reclamation}{2}] Pay 1 \mineral\ to place a Construction Tile, Wasteland side up, over any other 1x1 Room in your territory, including water. It is not possible to Reclaim any Room bigger than 1x1. The Construction Tile used should come from behind your Player Screen. Once you have taken the action, draw a new Construction Tile from the Public Storage if any remain.
-\item[\actionCost{Construct Building}{3}] Pay \minerals\ to the bank to construct a building. The amount to be paid depends on the building type: 2 \minerals\ for Industry, Traffic or Economy buildings; 3 \minerals\ for Military, Political and Cultural Buildings. Buildings may be constructed over any 1x1 room in your territory except for water rooms.
+\item[\actionCost{Construct Building}{3}] Pay \minerals\ to the bank to construct a building. The amount to be paid depends on the building type: 2 \minerals\ for Industry, \traffic\ or Economy buildings; 3 \minerals\ for Military, Political and Cultural Buildings. Buildings may be constructed over any 1x1 room in your territory except for water rooms.
 \begin{itemize}
 \item You may only use the Construction Tiles from behind your Player Screen when constructing buildings.
 \item Once you have constructed a building, you should draw a new Construction Tile from the Public Storage if any remain.
-\item If you ever cover the Construction Tile, either with a Land Card or another Construction Tile, simply remove it from the game.
+\item If you ever cover the Construction Tile, either with a \landcard\ or another Construction Tile, simply remove it from the game.
 \end{itemize}
 \end{description}
 
@@ -445,7 +451,7 @@ In general, the \myPhase{Movement} phase can be played simultaneously by all pla
 
 \subsubsection{Movement within the territory.}
 \begin{itemize}
-\item Each Land Card is made up of one or more Rooms.
+\item Each \landcard\ is made up of one or more Rooms.
 \item For each Transport Level, a given worker may move to any Room which is orthogonally adjacent to the one the worker is currently standing in. Diagonal movement is not permitted.
 \item Only one worker is allowed in each Room. Workers may move through Rooms containing other workers but may not stop there.
 \item Workers may occupy water Rooms.
@@ -570,8 +576,9 @@ The players will now Vote on the set of Prosperity Cards which will be used to s
 First, remove the card or cards which received the fewest number of votes. If any cards remain, score them one at a time.
 
 Here is a breakdown of the different Prosperity Cards in the game:
+\iftoggle{original-rules}{
 \begin{description}
-\item[Maximum Capacity - General Building:] Rank the players according to the number of General Building rooms in their territory. General Buildings are Culture, Traffic, Industry, Politics, Economy, and Military. Special Buildings (the ones with a white background), Water, Wasteland, Heroes, or Wonders are not included. General Buildings which have been patched over do not count.
+\item[Maximum Capacity - General Building:] Rank the players according to the number of General Building rooms in their territory. General Buildings are Culture, \traffic, Industry, Politics, Economy, and Military. Special Buildings (the ones with a white background), Water, Wasteland, Heroes, or Wonders are not included. General Buildings which have been patched over do not count.
 \item[Maximum Capacity - Hero:] Rank the players according to the number of Heroes in their territory. Heroes which have been patched over do not count.
 \item[Maximum Capacity - Military:] Rank the players according to their current \mil\ as shown on their \psb. This should equal the number of active swords in their territory along with any bonuses from Heroes or Wonders. Shields are not counted.
 \item[Maximum Capacity - Politics:] Rank the players according to their current \pol\ as shown on their \psb. This should equal the number of active books in their territory along with any bonuses from Heroes or Wonders.
@@ -587,6 +594,25 @@ Here is a breakdown of the different Prosperity Cards in the game:
 \item[Maximum Production - \mineral:] Rank the players according to their current \mineral\ production as shown on their \psb. This should equal the number of active \mineral\ icons in their territory along with any bonuses from Heroes or Wonders.
 \item[Maximum Production - \money:] Rank the players according to their current \money\ production as shown on their \psb. This should equal the number of active coin icons in their territory along with any bonuses from Heroes or Wonders.
 \end{description}
+}{
+\begin{description}
+\item[Advancing Technology!:] Rank the players according to their current \mineral\ production as shown on their \psb. This should equal the number of active \mineral\ icons in their territory along with any bonuses from Heroes or Wonders.
+\item[Advent of Capitalism!:] Rank the players according to their current \money\ production as shown on their \psb. This should equal the number of active coin icons in their territory along with any bonuses from Heroes or Wonders.
+\item[Arms Race!:] Rank the players according to their current \mil\ as shown on their \psb. This should equal the number of active swords in their territory along with any bonuses from Heroes or Wonders. Shields are not counted.
+\item[Commoners' Street!:] Rank the players according to the number of General Building rooms in their territory. General Buildings are Culture, \traffic, Industry, Politics, Economy, and Military. Special Buildings (the ones with a white background), Water, Wasteland, Heroes, or Wonders are not included. General Buildings which have been patched over do not count.
+\item[Connect the World!:] Rank the players according to the number of Trade Routes connected to their kingdom. You only count General Trade Routes which you constructed (i.e. ones where the ``Start'' space is next to your Kingdom) but you count all Allied Trade Routes connected to your Kingdom regardless of who constructed them.
+\item[Conquer the Seas!:] Rank the players according to the number of Water rooms in their territory. Water which has been patched over does not count.
+\item[Farther! Faster!:] Rank the players according to their current \tra\ as shown on their \psb. This should equal the number of active wheels in their territory along with any bonuses from Heroes or Wonders.
+\item[Flourishing Population!:] Rank the players according to their current Food production as shown on their \psb. This should equal the number of active Food icons in their territory along with any bonuses from Heroes or Wonders.
+\item[For the Community!:] Rank the players according to their current \pol\ as shown on their \psb. This should equal the number of active books in their territory along with any bonuses from Heroes or Wonders.
+\item[Glorious Culture!:] Rank the players according to their current \victorypoint\ production as shown on their \psb. This should equal the number of active \victorypoint\ icons in their territory along with any bonuses from Heroes or Wonders.
+\item[Grand Buildings!:] Rank the players according to the number of Special Building rooms in their territory. Special Buildings are the ones with a white background. General Buildings, Water, Wasteland, Heroes, or Wonders are not included. Special Buildings which have been patched over do not count.
+\item[Great Leaders!:] Rank the players according to the number of Heroes in their territory. Heroes which have been patched over do not count.
+\item[Marvelous Heritage!:] Rank the players according to the number of Wonders in their territory. Wonders which have been patched over do not count.
+\item[Maximum Capacity - Worker:] Rank the players according to the number of workers in their kingdom. This includes any workers on Trade Routes.
+\item[Pioneer the Wildlands!:] Rank the players according to the number of Wasteland rooms in their territory. Wastelands which have been patched over do not count.
+\end{description}
+}
 Once the players have ranked themselves appropriately, they then receive points according to the number of votes on the card:
 
 \begin{description}
@@ -606,7 +632,7 @@ Once all cards have been scored, remove all played Prosperity cards from the gam
 \subsection{The End of an Era}
 If any Heroes or Wonders have scoring related to \myPhase{The End of an Era} they are scored now.
 
-Remove any unused land cards from the current Era and prepare a new deck of 25 land cards for the next Era (skip this at the end of Era III).
+Remove any unused \landcards\ from the current Era and prepare a new deck of 25 \landcards\ for the next Era (skip this at the end of Era III).
 
 \section{Game End}
 The game ends at the end of Era III.
@@ -623,18 +649,18 @@ Do not place any General Trade Routes during the initial setup.
 In addition to all other materials, the players should each choose one of the Auction Tokens to use during the game.
 \subsection{Auction}
 \begin{itemize}
-\item Each auction will involve just two Land Cards.
-\item It doesn't matter which side is face up - the winner of each Land Card will choose which side they want to use when patching.
-\item The players are free to examine both sides of the Land Cards on offer.
+\item Each auction will involve just two \landcards.
+\item It doesn't matter which side is face up - the winner of each \landcard\ will choose which side they want to use when patching.
+\item The players are free to examine both sides of the \landcards\ on offer.
 \item The players should assign the labels 1 \& 2 to the cards.
 \item Instead of bidding in turn, the players will hide some amount of \money\ in their hands.
-\item They will also hide one of their Auction Tokens oriented to indicate which of the two Land Cards they are bidding on.
-\item If the players have bid on different Land Cards, they each take the card they were bidding on.
-\item If the players bid on the same Land Card, the player who bid the higher amount wins (First Player wins ties) and takes the Land Card in question. The losing player takes the other Land Card.
+\item They will also hide one of their Auction Tokens oriented to indicate which of the two \landcards\ they are bidding on.
+\item If the players have bid on different \landcards, they each take the card they were bidding on.
+\item If the players bid on the same \landcard, the player who bid the higher amount wins (First Player wins ties) and takes the \landcard\ in question. The losing player takes the other \landcard.
 \item All \money\ bid is returned to the Public Storage.
 \end{itemize}
 \subsection{Patching}
-Although you can usually allow patching to proceed simultaneously in a 3 or 4 player game, this is not recommended for a 2 player game. Instead, the First Player should first patch the Land Card they won and then the other player should patch the Land Card they won.
+Although you can usually allow patching to proceed simultaneously in a 3 or 4 player game, this is not recommended for a 2 player game. Instead, the First Player should first patch the \landcard\ they won and then the other player should patch the \landcard\ they won.
 \subsection{Scoring Prosperity Cards}
 No Prosperity cards are eliminated in a 2-player game - both played cards will always score.
 
@@ -671,7 +697,7 @@ Wonder and Hero effects only last as long as the Wonder or Hero in question is i
 \end{description}
 \subsection{Era II Wonders}
 \begin{description}
-\item[Angkor Wat:] Water Rooms within your kingdom may be regarded as wastelands. This means they can be patched over and under. Note that this effect does not apply to a Land Card until it has already been patched into your kingdom. As such, you may not patch any water rooms on new Land Cards under other cards, however, you may patch a new water room adjacent to existing water rooms. In addition, when counting rooms, you may count water rooms as either wasteland or water depending on which type you are counting.
+\item[Angkor Wat:] Water Rooms within your kingdom may be regarded as wastelands. This means they can be patched over and under. Note that this effect does not apply to a \landcard\ until it has already been patched into your kingdom. As such, you may not patch any water rooms on new \landcards\ under other cards, however, you may patch a new water room adjacent to existing water rooms. In addition, when counting rooms, you may count water rooms as either wasteland or water depending on which type you are counting.
 \item[Chichen-Itza:] Whenever you patch a wonder after the Chichen-Itza is patched, immediately gain 2 \minerals. At the end of the \myPhase{Maintain Heroes \& Wonders} phase, you may pay 1 worker and 2 \minerals\ to gain 5 \vps. You may take advantage of this bonus as many times as you can afford to pay for it.
 \item[Forbidden City:] You lose 3 \mil\ as long as the Forbidden City is patched.
 \item[Kremlin:] You must pay 1 worker and 7 \vps\ when patching the Kremlin. If you cannot afford this, you must pay as much as you are able to, but are still permitted to patch the Kremlin.
@@ -689,7 +715,7 @@ Wonder and Hero effects only last as long as the Wonder or Hero in question is i
 \item[Jeanne d'Arc:] When taking the \myAction{Campaign} action, gain an additional 2 votes. During a War, you may use 2 votes as 1 \mineral\ when boosting your Strength.
 \item[Martin Luther:] During the production step, gain 1 \vp\ per Industry building in your territory containing both an activity box (indicated by a gold border) and one of your workers. In addition, your \mil\ is increased by one for every Industry building in your territory containing both an activity box (indicated by a gold border) and one of your workers.
 \item[Napoleon Bonaparte:] Whenever you win a war, you may immediately carry out a \myAction{Threaten} action on the losing side. This action succeeds regardless of the relative Military Forces involved. This action does not cost any \polfs.
-\item[Vasco da Gama:] Once per game, during the \myPhase{Auction} phase, after the Land Cards are revealed but before any bidding takes place you may select one of the Land Cards and take it for free. You do not then participate in that auction round, but may patch the Land Card as normal. In addition, the \polfs\ cost of taking the \myAction{Exchange} action is set to 0.
+\item[Vasco da Gama:] Once per game, during the \myPhase{Auction} phase, after the \landcards\ are revealed but before any bidding takes place you may select one of the \landcards\ and take it for free. You do not then participate in that auction round, but may patch the \landcard\ as normal. In addition, the \polfs\ cost of taking the \myAction{Exchange} action is set to 0.
 \item[William Shakespeare:] During the Production step, gain 1 \money\ for every Culture building in your territory.
 \item[Yi Sun-sin:] Your \mil\ is increased by 1 for each Water Room in your territory. When patched, remove one descendant from your \psb\ and return it to the box. You always take the descendant from the lowest numbered space that is still covered, as such, this will result in an increase in maintenance costs.
 \end{description}
@@ -701,7 +727,7 @@ Wonder and Hero effects only last as long as the Wonder or Hero in question is i
 \item[Eiffel Tower:] Gain 4 \vps\ for every worker you have at the end of the game.
 \item[Red Cross:] After any War ends (regardless of your involvement) you may pay exactly 1 Food to gain 5 \vps. In addition, when taking the \myAction{Aid} action, your opponent may not refuse the aid.
 \item[Schwerer Gustav:] Remove one Trade Route (Allied or General) from anywhere when patched. During a War, when you using \minerals\ to boost your Strength, the first three \minerals\ you use boost your Strength by 2 instead of 1. Any additional \minerals\ after the third will give the usual boost of 1 Strength. In addition, the \myAction{Threaten} action costs 1 fewer \polfs\ (to a minimum of 1).
-\item[Statue of Liberty:] Once the Statue of Liberty is patched into your territory, you may ignore the usual territory size limit when patching Land Cards. Note that the Statue itself must still be patched into the usual 7x7 area. You also gain 3 \vps\ per wasteland created using the \myAction{Reclaimation} action in your territory at the end of the game. Once the Statue of Liberty has been patched into your territory, you are not permitted to patch over it later.
+\item[Statue of Liberty:] Once the Statue of Liberty is patched into your territory, you may ignore the usual territory size limit when patching \landcards. Note that the Statue itself must still be patched into the usual 7x7 area. You also gain 3 \vps\ per wasteland created using the \myAction{Reclaimation} action in your territory at the end of the game. Once the Statue of Liberty has been patched into your territory, you are not permitted to patch over it later.
 \item[Stealth Aircraft:] Once per round, after winning a war, you may use the \myAction{Reclaimation} action on your opponents territory. This action is free both in terms of \goods\ and \polfs. You use one of your own Construction Tiles for the wasteland. All other normal rules and restrictions for \myAction{Reclaimation} apply.
 \item[Wall Street:] Gain 2 \vps\ for every 3 \money\ you have at the end of the game (round down).
 \end{description}
