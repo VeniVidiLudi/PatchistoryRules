@@ -16,7 +16,7 @@
 \title{\textbf{Patchistory}}
 \newif\iforiginal
 \newtoggle{original-rules}
-\toggletrue{original-rules}
+\togglefalse{original-rules}
 \iftoggle{original-rules}{
 \originaltrue
 }{
@@ -26,7 +26,7 @@
 \iftoggle{original-rules}{
 \date{v1.3d 2014-11-11}
 }{
-\date{v1.3sk 2014-11-11}
+\date{v1.3.1sk 2014-11-18}
 }
 \begin{document}
 \definecolor{TFFrameColor}{gray}{0.5}
@@ -713,10 +713,10 @@ Wonder and Hero effects only last as long as the Wonder or Hero in question is i
 \end{description}
 \subsection{Era II Wonders}
 \begin{description}
-\item[Angkor Wat:] Water Rooms within your kingdom may be regarded as Wastelands. This means they can be patched over and under. Note that this effect does not apply to a \landcard\ until it has already been patched into your kingdom. As such, you may not patch any water rooms on new \landcards\ under other cards, however, you may patch a new water room adjacent to existing water rooms. In addition, when counting rooms, you may count water rooms as either Wasteland or water depending on which type you are counting.
-\iftoggle{original-rules}{
+\iftoggle{original-rules}{\item[Angkor Wat:] Water Rooms within your kingdom may be regarded as Wastelands. This means they can be patched over and under. Note that this effect does not apply to a \landcard\ until it has already been patched into your kingdom. As such, you may not patch any water rooms on new \landcards\ under other cards, however, you may patch a new water room adjacent to existing water rooms. In addition, when counting rooms, you may count water rooms as either Wasteland or water depending on which type you are counting.
 \item[Chichen-Itza:] Whenever you patch a wonder after the Chichen-Itza is patched, immediately gain 2 \minerals. In order to count for this bonus, the wonder must be visible after patching. At the end of the \myPhase{Maintain Heroes \& Wonders} phase, you may pay 1 worker and 2 \minerals\ to gain 5 \vps. You may take advantage of this bonus as many times as you can afford to pay for it.}
-{\item[Chichen-Itza:] Whenever you patch a wonder after the Chichen-Itza is patched, immediately gain 2 \minerals. In order to count for this bonus, the wonder must be visible after patching. At the beginning of the \myPhase{Voting} phase, before any of the normal steps of that phase, you may return any number of your workers from your Territory or Trade Routes to the descendent track on your \psb. For each worker returned in this way, gain 5 \vps.}
+{\item[Angkor Wat:] Water Rooms within your kingdom count as both Water and Wastelands for the purposes of Prosperity Cards or any Wonder/Hero ability that depends on this. This does not allow you to ignore the normal patching restrictions for Water Rooms.
+\item[Chichen-Itza:] Whenever you patch a wonder after the Chichen-Itza is patched, immediately gain 2 \minerals. In order to count for this bonus, the wonder must be visible after patching. At the beginning of the \myPhase{Voting} phase, before any of the normal steps of that phase, you may return any number of your workers from your Territory or Trade Routes to the descendent track on your \psb. For each worker returned in this way, gain 5 \vps.}
 \item[Forbidden City:] You lose 3 \mil\ as long as the Forbidden City is patched.
 \iftoggle{original-rules}{}{\item[Hagia Sophia:] When taking the \myAction{\worship\ Heroes} action, in addition to the \vps\ you also receive 1 Vote and 2 \money\ from the Public Storage.}
 \item[Kremlin:] You must pay 1 worker and 7 \vps\ when patching the Kremlin. If you cannot afford this, you must pay as much as you are able to, but are still permitted to patch the Kremlin. The worker must be removed from your Territory or a Trade Route and returned to the Descendant Track on your \psb.
