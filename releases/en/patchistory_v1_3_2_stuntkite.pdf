@@ -16,7 +16,7 @@
 \title{\textbf{Patchistory}}
 \newif\iforiginal
 \newtoggle{original-rules}
-\toggletrue{original-rules}
+\togglefalse{original-rules}
 \iftoggle{original-rules}{
 \originaltrue
 }{
