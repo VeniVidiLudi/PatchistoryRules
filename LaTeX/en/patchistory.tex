@@ -24,9 +24,9 @@
 }
 \author{Jun-Hyup Kim \& Yeon-Min Jung}
 \iftoggle{original-rules}{
-\date{v1.3.2d 2014-12-22}
+\date{v1.3.3d 2017-06-19}
 }{
-\date{v1.3.2sk 2014-12-22}
+\date{v1.3.3sk 2017-06-19}
 }
 \begin{document}
 \definecolor{TFFrameColor}{gray}{0.5}
@@ -146,7 +146,9 @@ Trade Routes represent connections between different Kingdoms. Through Trade Rou
 Allied Trade Routes represent a strong Alliance between two Kingdoms. Once an Alliance is established, neither Kingdom may take any aggressive action (e.g. War or Threatening) without first breaking the Alliance. There can only be a single Allied Trade Route between any pair of Kingdoms.
 \compHead{Status Markers}
 \inlineImage{StatusMarkers}
-These markers are placed on the tracks of your \psb\ to track the overall status of your Kingdom.
+These markers are placed on the tracks of your \psb\ to track the overall status of your Kingdom.\iftoggle{original-rules}{}{
+
+There is an eighth, white status marker (not pictured above) for tracking your Defensive Force.}
 \compHead{Prosperity Cards}
 \inlineImage{ProsperityCards}
 Prosperity Cards are played during the \myPhase{Vote} phase at the end of each era. The cards will reward players for their relative standings in either the production levels of a specific \good\ or the number of a particular room type in their Territory. There are a total of 15 cards covering different \goods\ and room types.
@@ -179,7 +181,7 @@ These tokens represent \money\ and come in three denominations: 1, 2, and 5.
 These tokens represent \victorypoints\ and come in five denominations: 1, 5, 10, 20 and 80.
 \compHead{Auction Tokens}
 \centerline{\includegraphics[height=1.25cm]{AT1}\includegraphics[height=1.25cm]{AT2}  \includegraphics[height=1.25cm]{AT3}\includegraphics[height=1.25cm]{AT4}}
-These tokens are used during the auction phase in the two-player game. \iftoggle{original-rules}{The red tokens feature Genghis Khan while the Blue tokens feature Rommel.}{They are also used during the Negotiation step of the myPhase{Negotiation \& War} phase. One token features Genghis Khan and the other features Rommel. Both tiles have a Red side, with the number 1, and a Blue side with the number 2.}
+These tokens are used during the auction phase in the two-player game. \iftoggle{original-rules}{The red tokens feature Genghis Khan while the Blue tokens feature Rommel.}{They are also used during the Negotiation step of the \myPhase{Negotiation \& War} phase. One token features Genghis Khan and the other features Rommel. Both tiles have a Red side, with the number 1, and a Blue side with the number 2.}
 \compHead{Timeline Board}
 \begin{tabular}{p{2cm} p{5cm}}
 	\vspace{0pt}
@@ -322,7 +324,7 @@ Once you have won an auction, you must immediately patch the \landcard\ into you
 \inlineImage{NoWaterWater}
 \begin{itemize}
 \item Once patched, no tile may be patched under a water room.
-\item Water rooms may not be patched in such that they are adjacent to one another.
+\item Water rooms may not be patched in such that they are orthogonally adjacent to one another. Diagonal adjacency is permitted.
 \item It is possible to patch a \landcard\ inbetween two other \landcards\ such that part of it is patched on top of one \landcard\ and part of it is patched below another \landcard. However, you may not patch a card in between a \landcard\ and a Construction Tile that sits on that \landcard.
 \end{itemize}
 \inlineImage[4.5cm]{NoInbetween}
@@ -369,6 +371,7 @@ The players will gain an amount of \polfs\ equal to their \pol\ status which the
 \item Whenever you see a cost written like this \eraCost{X}{Y}{Z} it means the cost in \goods\ is X in Era I, Y in Era II and Z in Era III.
 \item The number in parentheses after each action name indicates the cost in \polfs\ to take that action. The same information is indicated by the purple dots beside each action on the player summary.
 \item \polfs\ are not refreshed between the Diplomacy and Management phases.
+\item Unused \polfs\ are lost. They may not be carried forward into a subsequent round.
 \end{itemize}
 
 \subsubsection{Diplomacy Actions}
@@ -387,7 +390,7 @@ The players will gain an amount of \polfs\ equal to their \pol\ status which the
 \item If your Attack Force is sufficient, you may demand either \eraCost{3}{4}{5} \money\ or \eraCost{2}{3}{4} \vps. The player being threatened must pay if possible.
 }{
 \item If your Attack Force is higher than your opponents Defensive Force, you may demand either 3 \money\ or 2 \vps. The player being threatened must pay if possible.
-\item If your Attack Force is 5 or more points higher than your opponents Defensive force, the demanded amounts increase to 5 \money\ or 4 \vps. The player being threatened must pay if possible.
+\item If your Attack Force is 5 or more points higher than your opponents Defensive Force, the demanded amounts increase to 5 \money\ or 4 \vps. The player being threatened must pay if possible.
 }
 \item If the player being threatened lacks sufficient \goods\ to pay, they must pay whatever amount of the requested \good\ they have.
 \end{itemize}
@@ -661,6 +664,7 @@ In addition to all other materials, the players should each choose one of the Au
 \item The players are free to examine both sides of the \landcards\ on offer.
 \item The players should assign the labels 1 \& 2 to the cards.
 \item Instead of bidding in turn, the players will hide some amount of \money\ in their hands.
+\item The minimum bid is 1 \money.
 \item They will also hide one of their Auction Tokens oriented to indicate which of the two \landcards\ they are bidding on.
 \item If the players have bid on different \landcards, they each take the card they were bidding on.
 \item If the players bid on the same \landcard, the player who bid the higher amount wins (First Player wins ties) and takes the \landcard\ in question. The losing player takes the other \landcard.
@@ -717,14 +721,14 @@ Wonder and Hero effects only last as long as the Wonder or Hero in question is i
 \item[Chichen-Itza:] Whenever you patch a wonder after the Chichen-Itza is patched, immediately gain 2 \minerals. In order to count for this bonus, the wonder must be visible after patching. At the end of the \myPhase{Maintain Heroes \& Wonders} phase, you may pay 1 worker and 2 \minerals\ to gain 5 \vps. You may take advantage of this bonus as many times as you can afford to pay for it.}
 {\item[Angkor Wat:] Water Rooms within your kingdom count as both Water and Wastelands for the purposes of Prosperity Cards or any Wonder/Hero ability that depends on this. This does not allow you to ignore the normal patching restrictions for Water Rooms.
 \item[Chichen-Itza:] Whenever you patch a wonder after the Chichen-Itza is patched, immediately gain 2 \minerals. In order to count for this bonus, the wonder must be visible after patching. At the beginning of the \myPhase{Voting} phase, before any of the normal steps of that phase, you may return any number of your workers from your Territory or Trade Routes to the descendent track on your \psb. For each worker returned in this way, gain 5 \vps.}
-\item[Forbidden City:] You lose 3 \mil\ as long as the Forbidden City is patched.
+\item[Forbidden City:] You lose 3 \mil\ as long as the Forbidden City is patched. If your \mil\ is less than 3, you may still patch the Forbidden City. Note that while the Forbidden City cannot reduce your \mil\ below 0, the 3 \mil\ deficit must be overcome completely before you can raise your \mil\ above 0. For example, if you had 2 \mil, patched the Forbidden City and then participated in a War, you would have to pay 2  \minerals\ to raise your \mil\ to 1. The first \mineral\ would only counteract the deficit from the Forbidden City.
 \iftoggle{original-rules}{}{\item[Hagia Sophia:] When taking the \myAction{\worship\ Heroes} action, in addition to the \vps\ you also receive 1 Vote and 2 \money\ from the Public Storage.}
 \item[Kremlin:] You must pay 1 worker and 7 \vps\ when patching the Kremlin. If you cannot afford this, you must pay as much as you are able to, but are still permitted to patch the Kremlin. The worker must be removed from your Territory or a Trade Route and returned to the Descendant Track on your \psb.
 \item[Machu Picchu:] You do not need to pay any maintenance during the \myPhase{Maintain Heroes \& Wonders} phase.
 \iftoggle{original-rules}{\item[Pantheon:] When taking the \myAction{\worship\ Heroes} action, in addition to the \vps\ you also receive 1 Vote and 2 \money\ from the Public Storage.}
 \item[Seokguram:] Counts as 2 wonders whenever you need to count the number of wonders you own (e.g. when using the \myAction{\worship\ Wonders} action). It counts as only 1 wonder for the purposes of maintenance.
 \item[Taj Mahal:] When using the \myAction{\worship\ Wonders} action gain an additional \vp\ per wonder  you own.
-\item[Timbuktu:] When patched immediately construct a General Trade Route between your kingdom and another, if any remain in the Public Storage. In addition, whenever you gain \goods\ from a Trade Route (Allied or General) gain one additional \good\ of the same type.
+\item[Timbuktu:] When patched immediately construct a General Trade Route between your kingdom and another, if any remain in the Public Storage. This Trade Route will remain in place even if Timbuktu is patched over later. In addition, whenever you gain \goods\ from a Trade Route (Allied or General) gain one additional \good\ of the same type.
 \end{description}
 \subsection{Era II Heroes}
 \begin{description}
@@ -733,7 +737,7 @@ Wonder and Hero effects only last as long as the Wonder or Hero in question is i
 \item[Genghis Khan:] Your \mil\ is increased by 1 for each trade route connected to your kingdom. Note that only General Trade Routes constructed by you (i.e. ones where the ``Start'' space is next to your kingdom) count. All Allied trade routes count. When taking the \myAction{Trade} action, your cost in Food is fixed at 1.
 \item[Jeanne d'Arc:] When taking the \myAction{Campaign} action, gain an additional 2 votes. During a War, you may use 2 votes as 1 \mineral\ when boosting your Strength.
 \item[Martin Luther:] During the production step, gain 1 \vp\ per Industry building in your territory containing both an Activity Box (indicated by a gold border) and one of your workers. In addition, your \mil\ is increased by one for every Industry building in your territory containing both an Activity Box (indicated by a gold border) and one of your workers.
-\item[Napoleon Bonaparte:] Whenever you win a war, you may immediately carry out a \myAction{Threaten} action on the losing side. This action succeeds regardless of the relative Military Forces involved. This action does not cost any \polfs.
+\item[Napoleon Bonaparte:] Whenever you win a war, you may immediately carry out a \myAction{Threaten} action on the losing side. This action succeeds regardless of the relative Military Forces involved. You will only receive the basic reward unless your Attack Force exceeds your opponents Defensive Force by at least 5. This action does not cost any \polfs.
 \item[Vasco da Gama:] Once per game, during the \myPhase{Auction} phase, after the \landcards\ are revealed but before any bidding takes place you may select one of the \landcards\ and take it for free. You do not then participate in that auction round, but may patch the \landcard\ as normal. \iftoggle{original-rules}{In addition, the \polfs\ cost of taking the \myAction{Exchange} action is set to 0.}{In addition, when taking the \myAction{Exchange} action, you may exchange any number of goods regardless of your \tra although you are still limited to converting from a single type of good in each \myAction{Exchange} action.}
 \item[William Shakespeare:] During the Production step, gain 1 \money\ for every Culture building in your territory.
 \item[Yi Sun-sin:] Your \mil\ is increased by 1 for each Water Room in your territory. When patched, remove one descendant from your \psb\ and return it to the box. You always take the descendant from the lowest numbered space that is still covered, as such, this will result in an increase in maintenance costs.
@@ -772,7 +776,7 @@ Wonder and Hero effects only last as long as the Wonder or Hero in question is i
 \item[Montezuma:] When patched you may return up to three of your workers from anywhere in your territory or on a Trade Route to the highest numbered, unoccupied spaces on your \psb. You gain 7 \vps\ for each worker you returned this way. In addition, each other player must return the same number of their workers in the same way but gain no \vps\ for doing so.
 \item[Pacal:] Once Pacal is patched into your territory, your territory size limit is increased to 6x6 in Era I, 7x7 in Era II and 8x8 in Era III. Note that Pacal must still be patched within the normal area for the current Era. Once Pacal has been patched into your territory, you are not permitted to patch over him later. In addition, when taking the \myAction{Birth} action, you pay two less Food than normal.
 \item[Richard Nixon:] During the \myPhase{Vote} phase, after the Prosperity Cards have been revealed, you may swap one Prosperity Card for another Prosperity card used in an earlier era in this game.
-\item[Sacagewa:] Your \pol\ is increase by 1 for each Hero in your Territory. In addition, during the production step, gain 1 Food for every 2 Heroes in your Territory (round down).
+\item[Sacagewa:] Your \pol\ is increase by 1 for every 2 Heroes in your Territory. In addition, during the production step, gain 1 Food for every 2 Heroes in your Territory (round down).
 \end{description}}
 \section*{Credits}
 \newcommand\noda{Kim~Jun~Hyup}
